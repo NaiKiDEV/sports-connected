@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import Container from 'react-bootstrap/Container';
 import image1 from '../img/gym1.jpg';
 import image2 from '../img/gym2.png';
 import image3 from '../img/gym3.jpg';
@@ -19,7 +18,7 @@ class CarouselScreen extends Component {
                         />
                         <image1 />
                         <Carousel.Caption>
-                            <h3>SPORTCONNECTED FOR EVERYONE</h3>
+                            <h2 className="text-bold">SPORTSCONNECTED FOR EVERYONE</h2>
                             <p>Go ahead and create your account now to see all the new hot offers ranging from gym's to personal trainers. Upgrade your game right NOW!</p>
                         </Carousel.Caption>
                     </Carousel.Item>
@@ -30,7 +29,7 @@ class CarouselScreen extends Component {
                             alt="Second slide"
                         />
                         <Carousel.Caption>
-                            <h3>NEW GYM HAS LAUNCHED - VSFITNESS</h3>
+                            <h2 className="text-bold">NEW GYM HAS LAUNCHED - VSFITNESS</h2>
                             <p>Login using Sports Connected account to see new VSFITNESS offers.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
@@ -42,7 +41,7 @@ class CarouselScreen extends Component {
                         />
 
                         <Carousel.Caption>
-                            <h2>HOT OFFER AT GYM+</h2>
+                            <h2 className="text-bold">HOT OFFERS AT GYM+</h2>
                             <p>There is a huge discount currently at Gym+ offering up to 40% off for your first membership!</p>
                         </Carousel.Caption>
                     </Carousel.Item>

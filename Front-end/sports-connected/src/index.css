@@ -1,40 +1,67 @@
 body {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.btn {
+p.text-logo{
+  font-size: 28px;
   font-weight: 700;
+  line-height: 1.6rem;
+  transition: color 0.2s ease-in-out;
 }
 
-.brand-name{
-  font-weight: bold;
-}
 
-.navbar {
-  border-bottom: 2px solid #333;
+.navbar-color{
+  background-color: #002770 !important;
 }
 
 .background-tint {
   filter: saturate(50%) brightness(40%);
 }
 
+.text-bold{
+  font-weight: bold;
+}
+
 .carousel-image{
   width: 100%;
-  height: 688px;
+  height: 40vw;
 }
 
 .btn-navbar {
-  width: 100px;
+  width: 125px;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none !important;
+  color: white !important;
+}
+.btn-login {
+  width: 75px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: white !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
 }
 
-.navbar-logo{
-  font-size: 20px;
+.btn-login:hover{
+  letter-spacing: 3px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn-register {
+  background-color: #3282b8 !important;
+  color: white !important;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-register:hover{
+  width: 130px;
+  letter-spacing: 2px;
 }

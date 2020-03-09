@@ -7,9 +7,9 @@ class NavBar extends Component {
     render() {
         return (
 
-            <Navbar expand="lg" variant="dark" bg="danger">
-                <Container>
-                    <Navbar.Brand href="#" className="brand-name"> <i className="fas fa-dumbbell navbar-logo mr-1"></i>  Sports Connected</Navbar.Brand>
+            <Navbar expand="lg" className="navbar-color">
+                <Container bsPrefix="container-fluid">
+                    <Navbar.Brand href="#" className="brand-name "> <p className="mb-0 text-bold text-light text-logo">SPORTS CONNECTED.</p></Navbar.Brand>
                     <Form inline>
                         <LoginButton />
                         <RegisterButton />
