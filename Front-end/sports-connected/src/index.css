@@ -6,7 +6,7 @@ body {
 }
 
 p.text-logo{
-  font-size: 28px;
+  font-size: 29px;
   font-weight: 700;
   line-height: 1.6rem;
   color: white !important;
@@ -36,7 +36,7 @@ p.text-logo:hover
 }
 
 .btn-navbar {
-  width: 125px;
+  width: 175px;
   border-radius: 20px;
   border: #5BC0BE solid 2px;
   font-weight: 700;
@@ -46,7 +46,7 @@ p.text-logo:hover
   color: white !important;
 }
 .btn-login {
-  width: 75px;
+  width: 125px;
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 1px;
@@ -69,4 +69,24 @@ p.text-logo:hover
 .btn-register:hover{
   letter-spacing: 2px;
   background-color: #5BC0BE;
+}
+
+.bg-category{
+  background-color: #0B132B;
+  color: white;
+}
+
+.text-uppercase{
+  text-transform: uppercase;
+}
+
+.text-blackfont{
+  font-weight: 900;
+}
+
+.category-logo{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid white;
 }
