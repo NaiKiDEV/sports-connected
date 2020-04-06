@@ -14,3 +14,17 @@ C:\Users\User\Desktop\backend\SportsConnected\SportsConnected\obj\Debug\netcorea
 C:\Users\User\Desktop\backend\SportsConnected\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.RazorTargetAssemblyInfo.cache
 C:\Users\User\Desktop\backend\SportsConnected\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.dll
 C:\Users\User\Desktop\backend\SportsConnected\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.pdb
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\SportsConnected.deps.json
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\SportsConnected.runtimeconfig.json
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\SportsConnected.runtimeconfig.dev.json
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\SportsConnected.dll
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\SportsConnected.pdb
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.csprojAssemblyReference.cache
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.csproj.CoreCompileInputs.cache
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.RazorAssemblyInfo.cache
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.RazorAssemblyInfo.cs
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.AssemblyInfoInputs.cache
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.AssemblyInfo.cs
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.RazorTargetAssemblyInfo.cache
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.dll
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.pdb
