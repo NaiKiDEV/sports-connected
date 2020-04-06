@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\backend\\SportsConnected\\SportsConnected\\SportsConnected.csproj": {}
+    "C:\\Users\\K\\Desktop\\web\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\backend\\SportsConnected\\SportsConnected\\SportsConnected.csproj": {
+    "C:\\Users\\K\\Desktop\\web\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\backend\\SportsConnected\\SportsConnected\\SportsConnected.csproj",
+        "projectUniqueName": "C:\\Users\\K\\Desktop\\web\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
         "projectName": "SportsConnected",
-        "projectPath": "C:\\Users\\User\\Desktop\\backend\\SportsConnected\\SportsConnected\\SportsConnected.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\backend\\SportsConnected\\SportsConnected\\obj\\",
+        "projectPath": "C:\\Users\\K\\Desktop\\web\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
+        "packagesPath": "C:\\Users\\K\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\K\\Desktop\\web\\sports-connected\\Back-end\\SportsConnected\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\K\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.10, )"
             }
           },
           "imports": [
