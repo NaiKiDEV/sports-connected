@@ -9,7 +9,7 @@ class NavBar extends Component {
 
             <Navbar expand="lg" className="navbar-color py-3">
                 <Container bsPrefix="container-fluid">
-                    <Navbar.Brand href="#" className="brand-name "> <p className="mb-0 text-bold text-light text-logo">SPORTS CONNECTED</p></Navbar.Brand>
+                    <Navbar.Brand href="#" className="brand-name "><p className="mb-0 text-bold text-light text-logo">SPORTS CONNECTED</p></Navbar.Brand>
                     <Form inline>
                         <LoginButton />
                         <RegisterButton />

@@ -32,7 +32,7 @@ p.text-logo:hover
 
 .carousel-image{
   width: 100%;
-  height: 40vw;
+  height: 45vw;
 }
 
 .btn-navbar {
@@ -69,6 +69,7 @@ p.text-logo:hover
 .btn-register:hover{
   letter-spacing: 2px;
   background-color: #5BC0BE;
+  color: black !important;
 }
 
 .bg-category{
@@ -88,5 +89,18 @@ p.text-logo:hover
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 4px solid white;
+  border: 3px solid white;
+}
+
+.feature-card{
+  border-radius: 2px;
+}
+
+.cta-window{
+  background-color: #0B132B;
+  color: white;
+}
+
+.text-darkblue{
+  color: #0B132B;
 }
