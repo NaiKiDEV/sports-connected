@@ -1,25 +1,37 @@
 import React, { Component } from 'react';
 import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
 
-class LoginModal extends React.Component {
+class RegisterModal extends Component {
     constructor(props, context) {
         super(props, context);
-        this.handleShow = this.handleShow.bind(this);
-        this.handleClose = this.handleClose.bind(this);
+        this.handleShowReg = this.handleShowReg.bind(this);
+        this.handleCloseReg = this.handleCloseReg.bind(this);
         this.state = {
-            loginShow: false,
+            registerShow: false,
+            name: '',
+            surname: '',
             email: '',
-            password: ''
+            password: '',
+            isUser: true,
+            isTrainer: false,
+            isSportGymAdmin: false,
+            isSportGymCourtAdmin: false,
         }
     }
-    loginUser() {
+    registerUser() {
 
         const user = {
             Email: this.state.email,
-            Password: this.state.password
+            Password: this.state.password,
+            Name: this.state.name,
+            Surname: this.state.surname,
+            IsUser: this.state.isUser,
+            IsTrainer: this.state.isTrainer,
+            IsSportGymAdmin: this.state.isSportGymAdmin,
+            IsSportGymCourtAdmin: this.state.isSportGymCourtAdmin
         }
         console.log(user);
-        fetch("https://localhost:44316/api/users/validate",
+        fetch("https://localhost:44316/api/users/add",
             {
                 method: 'POST',
                 headers: {
@@ -39,11 +51,11 @@ class LoginModal extends React.Component {
 
     }
 
-    handleShow() {
-        this.setState({ loginShow: true })
+    handleShowReg() {
+        this.setState({ registerShow: true })
     }
-    handleClose() {
-        this.setState({ loginShow: false })
+    handleCloseReg() {
+        this.setState({ registerShow: false })
     }
     render() {
         return (
@@ -51,11 +63,19 @@ class LoginModal extends React.Component {
                 <Modal
                     aria-labelledby="contained-modal-title-vcenter"
                     centered
-                    show={this.state.loginShow} onHide={this.handleClose}>
+                    show={this.state.registerShow} onHide={this.handleCloseReg}>
                     <Modal.Header closeButton>
-                        <Modal.Title >Prisijungimas</Modal.Title>
+                        <Modal.Title >Registracija</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
+                        <Form.Group className="" controlId="formGroupName">
+                            <Form.Label>Vardas</Form.Label>
+                            <Form.Control type="text" placeholder="" onChange={e => this.setState({ name: e.target.value })} />
+                        </Form.Group>
+                        <Form.Group className="" controlId="formGroupSurname">
+                            <Form.Label>Pavarde</Form.Label>
+                            <Form.Control type="text" placeholder="" onChange={e => this.setState({ surname: e.target.value })} />
+                        </Form.Group>
                         <Form.Group className="" controlId="formGroupEmail">
                             <Form.Label>El. Pastas</Form.Label>
                             <Form.Control type="email" placeholder="" onChange={e => this.setState({ email: e.target.value })} />
@@ -65,12 +85,11 @@ class LoginModal extends React.Component {
                             <Form.Control type="password" placeholder="" onChange={e => this.setState({ password: e.target.value })} />
                         </Form.Group>
                         <Row>
-                            <Col sm="8" className="pt-3">
-                                <a href="#" ><p className="mb-0">Pamirsote slaptazodi?</p></a>
+                            <Col sm="8">
                             </Col>
                             <Col sm=""></Col>
                             <Col sm="4">
-                                <Button className="float-right" variant="success" onClick={() => this.loginUser()}>Prisijungti</Button>
+                                <Button className="float-right" variant="success" onClick={() => this.registerUser()}>Registruotis</Button>
                             </Col>
 
                         </Row>
@@ -81,4 +100,5 @@ class LoginModal extends React.Component {
         )
     }
 }
-export default LoginModal;
+
+export default RegisterModal;

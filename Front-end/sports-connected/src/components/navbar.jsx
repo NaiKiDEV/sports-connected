@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LoginButton from "./login";
 import RegisterButton from "./register";
 import LoginModal from './LoginModal';
+import RegisterModal from './registerModal';
 import { Container, Navbar, Form } from "react-bootstrap";
 
 class NavBar extends Component {
@@ -9,8 +10,16 @@ class NavBar extends Component {
         this.showModal = handleShow;
     }
 
-    onLoginClick = () => {
+    registerModalRef = ({ handleShowReg }) => {
+        this.showModalReg = handleShowReg;
+    }
+
+    onModalClick = () => {
         this.showModal();
+    }
+
+    onRegisterClick = () => {
+        this.showModalReg();
     }
 
     render() {
@@ -20,12 +29,13 @@ class NavBar extends Component {
                     <Container bsPrefix="container-fluid">
                         <Navbar.Brand href="#" className="brand-name "><p className="mb-0 text-bold text-light text-logo">SPORTS CONNECTED</p></Navbar.Brand>
                         <Form inline>
-                            <LoginButton onClick={this.onLoginClick} />
-                            <RegisterButton />
+                            <LoginButton onClick={this.onModalClick} />
+                            <RegisterButton onClick={this.onRegisterClick} />
                         </Form>
                     </Container>
                 </Navbar>
                 <LoginModal ref={this.loginModalRef} ></LoginModal>
+                <RegisterModal ref={this.registerModalRef} ></RegisterModal>
             </div>
         );
     }
