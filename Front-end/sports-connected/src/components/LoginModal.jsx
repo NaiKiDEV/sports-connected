@@ -52,25 +52,28 @@ class LoginModal extends React.Component {
                     aria-labelledby="contained-modal-title-vcenter"
                     centered
                     show={this.state.loginShow} onHide={this.handleClose}>
-                    <Modal.Header closeButton>
-                        <Modal.Title >Prisijungimas</Modal.Title>
+                    <Modal.Header className="login-header">
+                        <Modal.Title className="text-bold text-uppercase">Prisijungimas</Modal.Title>
+                        <a onClick={()=>this.setState({loginShow: false})}>
+                            x
+                        </a>
                     </Modal.Header>
-                    <Modal.Body>
-                        <Form.Group className="" controlId="formGroupEmail">
-                            <Form.Label>El. Pastas</Form.Label>
-                            <Form.Control type="email" placeholder="" onChange={e => this.setState({ email: e.target.value })} />
+                    <Modal.Body className="modal-content">
+                        <Form.Group controlId="formGroupEmail">
+                            <Form.Label>El. Paštas</Form.Label>
+                            <Form.Control type="email" className="border-zero submit-text" placeholder="" onChange={e => this.setState({ email: e.target.value })} />
                         </Form.Group>
                         <Form.Group className="" controlId="formGroupPassword">
-                            <Form.Label>Slaptazodis</Form.Label>
-                            <Form.Control type="password" placeholder="" onChange={e => this.setState({ password: e.target.value })} />
+                            <Form.Label>Slaptažodis</Form.Label>
+                            <Form.Control type="password" className="border-zero submit-text text-bold" placeholder="" onChange={e => this.setState({ password: e.target.value })} />
                         </Form.Group>
                         <Row>
                             <Col sm="8" className="pt-3">
-                                <a href="#" ><p className="mb-0">Pamirsote slaptazodi?</p></a>
+                                <a href="#" ><p className="mb-0">Pamiršote slaptažodį?</p></a>
                             </Col>
                             <Col sm=""></Col>
                             <Col sm="4">
-                                <Button className="float-right" variant="success" onClick={() => this.loginUser()}>Prisijungti</Button>
+                                <Button className="float-right btn-loginsubmit text-bold text-uppercase" variant="link" onClick={() => this.loginUser()}>Prisijungti</Button>
                             </Col>
 
                         </Row>
