@@ -31,7 +31,7 @@ class RegisterModal extends Component {
             IsSportGymCourtAdmin: this.state.isSportGymCourtAdmin
         }
         console.log(user);
-        fetch("https://localhost:44316/api/users/add",
+        fetch("https://sportsconnectedback.azurewebsites.net/api/users/add",
             {
                 method: 'POST',
                 headers: {

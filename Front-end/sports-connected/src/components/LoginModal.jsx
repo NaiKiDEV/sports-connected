@@ -14,13 +14,12 @@ class LoginModal extends React.Component {
         }
     }
     loginUser() {
-
         const user = {
             Email: this.state.email,
             Password: this.state.password
         }
         console.log(user);
-        fetch("https://localhost:44316/api/users/validate",
+        fetch("https://sportsconnectedback.azurewebsites.net/api/users/validate",
             {
                 method: 'POST',
                 headers: {
@@ -33,12 +32,13 @@ class LoginModal extends React.Component {
             .then(a => {
                 if (a.error === false) {
                     alert(a.message);
+                    window.location.replace("/dashboard");
                 } else {
                     alert(a.message);
                 }
             })
             .then(
-                window.location.replace("/dashboard"),
+                //window.location.replace("/dashboard"),
             );
 
     }
