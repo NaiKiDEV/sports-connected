@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
+import { Redirect } from 'react-router-dom';
 
 class LoginModal extends React.Component {
     constructor(props, context) {
@@ -35,7 +36,10 @@ class LoginModal extends React.Component {
                 } else {
                     alert(a.message);
                 }
-            });
+            })
+            .then(
+                window.location.replace("/dashboard"),
+            );
 
     }
 
@@ -54,9 +58,7 @@ class LoginModal extends React.Component {
                     show={this.state.loginShow} onHide={this.handleClose}>
                     <Modal.Header className="login-header">
                         <Modal.Title className="text-bold text-uppercase">Prisijungimas</Modal.Title>
-                        <a onClick={()=>this.setState({loginShow: false})}>
-                            x
-                        </a>
+                        <i className="close-button fas fa-times" alt="foto" onClick={() => this.setState({ loginShow: false })} />
                     </Modal.Header>
                     <Modal.Body className="modal-content">
                         <Form.Group controlId="formGroupEmail">
@@ -71,7 +73,6 @@ class LoginModal extends React.Component {
                             <Col sm="8" className="pt-3">
                                 <a href="#" ><p className="mb-0">Pamiršote slaptažodį?</p></a>
                             </Col>
-                            <Col sm=""></Col>
                             <Col sm="4">
                                 <Button className="float-right btn-loginsubmit text-bold text-uppercase" variant="link" onClick={() => this.loginUser()}>Prisijungti</Button>
                             </Col>
@@ -80,7 +81,7 @@ class LoginModal extends React.Component {
 
                     </Modal.Body>
                 </Modal>
-            </div>
+            </div >
         )
     }
 }

@@ -66,9 +66,7 @@ class RegisterModal extends Component {
                     show={this.state.registerShow} onHide={this.handleCloseReg}>
                     <Modal.Header className="modal-header">
                         <Modal.Title className="text-bold text-uppercase">Registracija</Modal.Title>
-                        <a onClick={()=>this.setState({loginShow: false})}>
-                            x
-                        </a>
+                        <i className="close-button fas fa-times" alt="foto" onClick={() => this.setState({ registerShow: false })} />
                     </Modal.Header>
                     <Modal.Body>
                         <Form.Group className="" controlId="formGroupName">

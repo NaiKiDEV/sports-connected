@@ -9,7 +9,6 @@ class LandingPage extends Component {
 
     render() {
         return (<div>
-            <NavBar />
             <Carousel />
             <Category />
             <Features />
