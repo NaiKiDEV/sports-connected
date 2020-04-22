@@ -47,3 +47,7 @@ C:\Users\User\Desktop\Semestro projektas\sports-connected\Back-end\SportsConnect
 C:\Users\User\Desktop\Semestro projektas\sports-connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.dll
 C:\Users\User\Desktop\Semestro projektas\sports-connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.pdb
 >>>>>>> refs/remotes/origin/master
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.genruntimeconfig.cache
