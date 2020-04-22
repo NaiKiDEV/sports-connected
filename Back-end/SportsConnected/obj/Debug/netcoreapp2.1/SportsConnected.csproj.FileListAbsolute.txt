@@ -47,7 +47,26 @@ C:\Users\User\Desktop\Semestro projektas\sports-connected\Back-end\SportsConnect
 C:\Users\User\Desktop\Semestro projektas\sports-connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.dll
 C:\Users\User\Desktop\Semestro projektas\sports-connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.pdb
 >>>>>>> refs/remotes/origin/master
+<<<<<<< HEAD
 C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\appsettings.Development.json
 C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\appsettings.json
 C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
 C:\Users\Paulius\Desktop\Sports Connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.genruntimeconfig.cache
+=======
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\SportsConnected.deps.json
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\SportsConnected.runtimeconfig.json
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\SportsConnected.runtimeconfig.dev.json
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\SportsConnected.dll
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\bin\Debug\netcoreapp2.1\SportsConnected.pdb
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.csprojAssemblyReference.cache
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.RazorAssemblyInfo.cache
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.RazorAssemblyInfo.cs
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.AssemblyInfoInputs.cache
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.AssemblyInfo.cs
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.RazorTargetAssemblyInfo.cache
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.dll
+C:\Users\K\Desktop\sports-connected\Back-end\SportsConnected\obj\Debug\netcoreapp2.1\SportsConnected.pdb
+>>>>>>> f75ac905d93e3073376d04f302f2673bd943ef76

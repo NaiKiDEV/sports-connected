@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Paulius\\Desktop\\Sports Connected\\Back-end\\SportsConnected\\SportsConnected.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\Paulius\\Desktop\\Sports Connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
         "packagesPath": "C:\\Users\\Paulius\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Paulius\\Desktop\\Sports Connected\\Back-end\\SportsConnected\\obj\\",
+=======
+    "C:\\Users\\K\\Desktop\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\K\\Desktop\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\K\\Desktop\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
+        "projectName": "SportsConnected",
+        "projectPath": "C:\\Users\\K\\Desktop\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
+        "packagesPath": "C:\\Users\\K\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\K\\Desktop\\sports-connected\\Back-end\\SportsConnected\\obj\\",
+>>>>>>> f75ac905d93e3073376d04f302f2673bd943ef76
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
