@@ -10,8 +10,12 @@ function App() {
       <NavBar />
       <BrowserRouter>
         <Switch>
-          <Route exact path={"/"} component={LandingPage} />
-          <Route exact path={"/dashboard"} component={Dashboard} />
+          <Route exact path="/">
+            <LandingPage />
+          </Route>
+          <Route exact path="/dashboard">
+            <Dashboard />
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>
