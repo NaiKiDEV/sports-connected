@@ -4,13 +4,21 @@ import RegisterButton from "./register";
 import LoginModal from './LoginModal';
 import RegisterModal from './registerModal';
 import { Container, Navbar, Form, Button } from "react-bootstrap";
+import { useSelector } from 'react-redux';
+import ProfileIcon from './navbarProfile';
 
 
 function NavbarUser(props) {
+    const isLogged = useSelector(state => state.isLogged);
     //const isLoggedIn = props.isLoggedIn;
-    if (props.isLoggedIn) {
+    if (isLogged) {
         return <Form inline>
-            <Button variant="danger" href="#" onClick={() => props.onLogoutClick()}>Atsijungti</Button>
+            <ProfileIcon></ProfileIcon>
+            {/*
+            <Button variant="danger" href="#" onClick={() => dispatch({
+                type: "LOGOUTUSER"
+            })}>Atsijungti</Button>
+             */}
         </Form>;
     }
     return <Form inline>
@@ -23,42 +31,37 @@ class NavBar extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            isLoggedIn: false
+            isLoggedIn: false,
+            loginModal: false,
+            registerModal: false
         }
     }
-
-    loginModalRef = ({ handleShow }) => {
-        this.showModal = handleShow;
-    }
-
-    registerModalRef = ({ handleShowReg }) => {
-        this.showModalReg = handleShowReg;
-    }
-
-    onLogoutClick = () => {
-        this.setState({ isLoggedIn: false })
-    }
-
     onModalClick = () => {
-        this.showModal();
+        this.setState({ loginModal: !this.state.loginModal });
     }
 
     onRegisterClick = () => {
-        this.showModalReg();
+        this.setState({ registerModal: !this.state.registerModal });
     }
+
 
     render() {
         return (
             <div>
                 <Navbar expand="lg" className="navbar-color py-3">
-                    <Container bsPrefix="container-fluid">
+                    <Container fluid>
                         <Navbar.Brand href="/" className="brand-name "><p className="mb-0 text-bold text-light text-logo">SPORTS CONNECTED</p></Navbar.Brand>
-                        <NavbarUser isLoggedIn={this.state.isLoggedIn} onModalClick={this.onModalClick} onRegisterClick={this.onRegisterClick} onLogoutClick={this.onLogoutClick} />
+                        <NavbarUser onModalClick={this.onModalClick} onRegisterClick={this.onRegisterClick} onLogoutClick={this.onLogoutClick} />
                     </Container>
                 </Navbar>
 
-                <LoginModal ref={this.loginModalRef} ></LoginModal>
-                <RegisterModal ref={this.registerModalRef} ></RegisterModal>
+                <LoginModal
+                    onModalClick={this.onModalClick}
+                    isOpen={this.state.loginModal} />
+
+                <RegisterModal
+                    onModalClick={this.onRegisterClick}
+                    isOpen={this.state.registerModal} />
             </div>
         );
     }

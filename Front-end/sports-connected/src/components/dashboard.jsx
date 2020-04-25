@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Navbar from './dashboardNavbar';
 
 class Dashboard extends Component {
     state = {}
