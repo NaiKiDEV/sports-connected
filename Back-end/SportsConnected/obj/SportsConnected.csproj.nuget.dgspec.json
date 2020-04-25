@@ -1,37 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\Paulius\\Desktop\\Sports Connected\\Back-end\\SportsConnected\\SportsConnected.csproj": {}
+    "C:\\Users\\K\\Desktop\\sports-connected\\sp\\sports-connected\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Paulius\\Desktop\\Sports Connected\\Back-end\\SportsConnected\\SportsConnected.csproj": {
+    "C:\\Users\\K\\Desktop\\sports-connected\\sp\\sports-connected\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Paulius\\Desktop\\Sports Connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
+        "projectUniqueName": "C:\\Users\\K\\Desktop\\sports-connected\\sp\\sports-connected\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
         "projectName": "SportsConnected",
-        "projectPath": "C:\\Users\\Paulius\\Desktop\\Sports Connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
-        "packagesPath": "C:\\Users\\Paulius\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Paulius\\Desktop\\Sports Connected\\Back-end\\SportsConnected\\obj\\",
-=======
-    "C:\\Users\\K\\Desktop\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\K\\Desktop\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\K\\Desktop\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
-        "projectName": "SportsConnected",
-        "projectPath": "C:\\Users\\K\\Desktop\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
+        "projectPath": "C:\\Users\\K\\Desktop\\sports-connected\\sp\\sports-connected\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
         "packagesPath": "C:\\Users\\K\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\K\\Desktop\\sports-connected\\Back-end\\SportsConnected\\obj\\",
->>>>>>> f75ac905d93e3073376d04f302f2673bd943ef76
+        "outputPath": "C:\\Users\\K\\Desktop\\sports-connected\\sp\\sports-connected\\sports-connected\\Back-end\\SportsConnected\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Paulius\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\K\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -66,10 +49,6 @@
               "target": "Package",
               "version": "[2.1.2, )"
             },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "target": "Package",
-              "version": "[3.1.3, )"
-            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -91,7 +70,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
