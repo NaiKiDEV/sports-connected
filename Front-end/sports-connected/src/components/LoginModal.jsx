@@ -1,12 +1,16 @@
 import React, { Component, useState } from 'react';
 import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
-import sha256 from 'js-sha256'
-import { useDispatch } from 'react-redux'
+import sha256 from 'js-sha256';
+import { useDispatch } from 'react-redux';
+import logUser from '../actions/loginAction';
+import { useHistory, Link } from 'react-router-dom';
+
 
 function LoginModal(props) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const dispatch = useDispatch();
+    const history = useHistory();
 
     function loginUser() {
         if (email === '') {
@@ -21,6 +25,7 @@ function LoginModal(props) {
             Email: email,
             Password: sha256(password)
         }
+
         console.log(user);
         fetch("https://sportsconnectedback.azurewebsites.net/api/users/validate",
             {
@@ -33,16 +38,17 @@ function LoginModal(props) {
         )
             .then(res => res.json())
             .then(a => {
+                //history.push("/dashboard");
                 if (a.error === false) {
                     alert(a.message);
-                    dispatch({
-                        type: 'LOGINUSER'
-                    });
+                    dispatch(logUser(true));
                     props.onModalClick();
+                    history.push("/dashboard");
                     //window.location.replace("/dashboard");
                 } else {
                     alert(a.message);
                 }
+
             });
 
     }

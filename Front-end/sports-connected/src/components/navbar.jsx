@@ -9,16 +9,10 @@ import ProfileIcon from './navbarProfile';
 
 
 function NavbarUser(props) {
-    const isLogged = useSelector(state => state.isLogged);
-    //const isLoggedIn = props.isLoggedIn;
-    if (isLogged) {
+    const { isLoggedIn } = useSelector(state => state.user);
+    if (isLoggedIn) {
         return <Form inline>
             <ProfileIcon></ProfileIcon>
-            {/*
-            <Button variant="danger" href="#" onClick={() => dispatch({
-                type: "LOGOUTUSER"
-            })}>Atsijungti</Button>
-             */}
         </Form>;
     }
     return <Form inline>
