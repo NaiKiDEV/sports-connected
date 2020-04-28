@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Dropdown, DropdownButton } from 'react-bootstrap'
 import { useDispatch } from 'react-redux';
-import logUser from '../actions/loginAction'
+import logUser from '../actions/loginAction';
+import setData from '../actions/userDataAction';
 
 // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
@@ -55,7 +56,10 @@ function ProfileIcon() {
                 <Dropdown.Menu as={CustomMenu} className="mb-0 pb-0" alignRight>
                     <Dropdown.Item disabled eventKey="1">Profilis</Dropdown.Item>
                     <Dropdown.Item disabled eventKey="2">Narystes</Dropdown.Item>
-                    <Dropdown.Item active eventKey="3" className="dropdown-button" onClick={() => dispatch(logUser(false))}>Atsijungti</Dropdown.Item>
+                    <Dropdown.Item active eventKey="3" className="dropdown-button"
+                        onClick={() => dispatch(logUser(false), dispatch(setData({})))}>
+                        Atsijungti
+                    </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
         </div>

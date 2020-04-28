@@ -3,6 +3,7 @@ import LandingPage from './components/landingPage';
 import Dashboard from './components/dashboard';
 import { Switch, Route } from "react-router-dom";
 import NavBar from './components/navbar';
+import Loader from './components/loader';
 
 function App() {
   return (

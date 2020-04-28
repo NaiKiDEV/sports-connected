@@ -10,6 +10,11 @@ const loggedReducer = (state = initialState, action) => {
                 ...state,
                 isLoggedIn: action.payload
             };
+        case 'SETUSERDATA':
+            return {
+                ...state,
+                userData: action.payload
+            }
         default:
             return state;
     };

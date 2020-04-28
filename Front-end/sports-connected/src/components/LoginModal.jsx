@@ -3,7 +3,8 @@ import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
 import sha256 from 'js-sha256';
 import { useDispatch } from 'react-redux';
 import logUser from '../actions/loginAction';
-import { useHistory, Link } from 'react-router-dom';
+import setData from '../actions/userDataAction';
+import { useHistory } from 'react-router-dom';
 
 
 function LoginModal(props) {
@@ -38,13 +39,23 @@ function LoginModal(props) {
         )
             .then(res => res.json())
             .then(a => {
-                //history.push("/dashboard");
                 if (a.error === false) {
+                    const { returnResult } = a;
                     alert(a.message);
+                    console.log(a);
                     dispatch(logUser(true));
+                    dispatch(setData({
+                        email: returnResult.email,
+                        id: returnResult.id,
+                        isSportGymAdmin: returnResult.isSportGymAdmin,
+                        isSportGymCourtAdmin: returnResult.isSportGymCourtAdmin,
+                        isTrainer: returnResult.isTrainer,
+                        isUser: returnResult.isUser,
+                        name: returnResult.name,
+                        surname: returnResult.surname
+                    }));
                     props.onModalClick();
                     history.push("/dashboard");
-                    //window.location.replace("/dashboard");
                 } else {
                     alert(a.message);
                 }
