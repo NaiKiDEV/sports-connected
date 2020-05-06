@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import RegisterButton from './register';
 
 class callToAction extends Component {
-    state = {}
     render() {
         return (
             <Container fluid className="text-center cta-window pt-5">

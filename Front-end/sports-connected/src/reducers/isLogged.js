@@ -1,6 +1,7 @@
 const initialState = {
     isLoggedIn: false,
-    userData: {}
+    userData: {},
+    errorName: ""
 }
 
 const loggedReducer = (state = initialState, action) => {
@@ -14,6 +15,11 @@ const loggedReducer = (state = initialState, action) => {
             return {
                 ...state,
                 userData: action.payload
+            }
+        case 'SETERROR':
+            return {
+                ...state,
+                errorName: action.payload
             }
         default:
             return state;

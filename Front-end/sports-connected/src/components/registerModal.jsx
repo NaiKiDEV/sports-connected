@@ -1,8 +1,11 @@
 import React, { Component, useState } from 'react';
 import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
-import sha256 from 'js-sha256'
+import sha256 from 'js-sha256';
+import { useDispatch } from 'react-redux';
+import setError from '../actions/errorSet';
 
 function RegisterModal(props) {
+    const dispatch = useDispatch();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
@@ -52,10 +55,12 @@ function RegisterModal(props) {
             .then(res => res.json())
             .then(a => {
                 if (a.error === false) {
-                    alert(a.message);
+                    //alert(a.message);
                     props.onModalClick();
                 } else {
-                    alert(a.message);
+                    //alert(a.message);
+                    dispatch(setError(a.message));
+                    props.onAlertClick();
                 }
             });
     }

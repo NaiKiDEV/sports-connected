@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
 class CategoryCard extends Component {
-    state = {}
     render() {
         return (
             <Container fluid className="text-center my-3">

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Dropdown, DropdownButton } from 'react-bootstrap'
+import { Dropdown, DropdownButton } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import logUser from '../actions/loginAction';
 import setData from '../actions/userDataAction';
+import { useHistory } from 'react-router-dom';
 
 // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
@@ -44,7 +45,7 @@ const CustomMenu = React.forwardRef(
 );
 
 function ProfileIcon() {
-
+    const history = useHistory();
     const dispatch = useDispatch();
     return (
         <div>
@@ -54,15 +55,17 @@ function ProfileIcon() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu as={CustomMenu} className="mb-0 pb-0" alignRight>
-                    <Dropdown.Item disabled eventKey="1">Profilis</Dropdown.Item>
-                    <Dropdown.Item disabled eventKey="2">Narystes</Dropdown.Item>
-                    <Dropdown.Item active eventKey="3" className="dropdown-button"
-                        onClick={() => dispatch(logUser(false), dispatch(setData({})))}>
+                    <Dropdown.Item eventKey="0" className="dropdown-button" onClick={() => history.push('/dashboard')}>Pagrindinis</Dropdown.Item>
+                    <Dropdown.Item eventKey="1" className="dropdown-button" onClick={() => history.push('/profile')}>Profilis</Dropdown.Item>
+                    <Dropdown.Item disabled eventKey="2" className="dropdown-button">Narystes</Dropdown.Item>
+                    <Dropdown.Item disabled eventKey="3" className="dropdown-button">Nustatymai</Dropdown.Item>
+                    <Dropdown.Item active eventKey="4" className="dropdown-button"
+                        onClick={() => dispatch(logUser(false), dispatch(setData({})), history.push('/'))}>
                         Atsijungti
                     </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
-        </div>
+        </div >
     )
 }
 

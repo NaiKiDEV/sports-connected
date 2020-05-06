@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import MembershipCard from '../components/membershipCard'
+import MembershipCard from './membershipCard'
 import { Container, Row, Col } from 'react-bootstrap';
+import GymCard from './gymcard';
+import CourtCard from './courtcard';
+import TrainerCard from './trainercard';
 
 
 function Dashboard() {
@@ -18,6 +21,9 @@ function Dashboard() {
                         <MembershipCard />
                     </Col>
                 </Row>
+            </Container>
+            <Container fluid className="mt-5">
+                <TrainerCard />
             </Container>
 
         </div>

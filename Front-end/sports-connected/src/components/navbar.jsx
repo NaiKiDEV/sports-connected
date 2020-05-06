@@ -6,6 +6,7 @@ import RegisterModal from './registerModal';
 import { Container, Navbar, Form, Button } from "react-bootstrap";
 import { useSelector } from 'react-redux';
 import ProfileIcon from './navbarProfile';
+import AlertBox from './alertbox';
 
 
 function NavbarUser(props) {
@@ -21,13 +22,21 @@ function NavbarUser(props) {
     </Form>;
 }
 
+function NavAlert(props) {
+    const { errorName } = useSelector(state => state.user);
+    return <AlertBox message={errorName} isOpen={props.isOpen}></AlertBox>
+}
+
 class NavBar extends Component {
+
     constructor(props, context) {
         super(props, context);
         this.state = {
             isLoggedIn: false,
             loginModal: false,
-            registerModal: false
+            registerModal: false,
+            alertShow: false,
+            errorMessage: ""
         }
     }
     onModalClick = () => {
@@ -38,6 +47,13 @@ class NavBar extends Component {
         this.setState({ registerModal: !this.state.registerModal });
     }
 
+    onAlertClick = () => {
+        this.setState({ alertShow: true });
+        setTimeout(() => this.setState({ alertShow: false }), 2000);
+    }
+    onAlertCloseClick = () => {
+        this.setState({ alertShow: false });
+    }
 
     render() {
         return (
@@ -51,12 +67,19 @@ class NavBar extends Component {
 
                 <LoginModal
                     onModalClick={this.onModalClick}
-                    isOpen={this.state.loginModal} />
+                    isOpen={this.state.loginModal}
+                    onAlertClick={this.onAlertClick} />
 
                 <RegisterModal
                     onModalClick={this.onRegisterClick}
-                    isOpen={this.state.registerModal} />
-            </div>
+                    isOpen={this.state.registerModal}
+                    onAlertClick={this.onAlertClick} />
+
+                <div onClick={this.onAlertCloseClick}>
+                    <NavAlert isOpen={this.state.alertShow}></NavAlert>
+                </div>
+
+            </div >
         );
     }
 }

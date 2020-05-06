@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import logUser from '../actions/loginAction';
 import setData from '../actions/userDataAction';
 import { useHistory } from 'react-router-dom';
+import setError from '../actions/errorSet';
 
 
 function LoginModal(props) {
@@ -57,11 +58,11 @@ function LoginModal(props) {
                     props.onModalClick();
                     history.push("/dashboard");
                 } else {
-                    alert(a.message);
+                    //alert(a.message);
+                    dispatch(setError(a.message));
+                    props.onAlertClick();
                 }
-
             });
-
     }
 
     return (
