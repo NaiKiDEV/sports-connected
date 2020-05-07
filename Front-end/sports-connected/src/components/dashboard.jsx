@@ -11,19 +11,19 @@ function Dashboard() {
         <div>
             <Container fluid className="mt-5">
                 <Row>
-                    <Col md={{ span: 4 }}>
-                        <MembershipCard />
-                    </Col>
-                    <Col md={{ span: 4 }}>
-                        <MembershipCard />
-                    </Col>
-                    <Col md={{ span: 4 }}>
+                    <Col md={{ span: 8, offset: 2 }}>
                         <MembershipCard />
                     </Col>
                 </Row>
             </Container>
             <Container fluid className="mt-5">
                 <TrainerCard />
+            </Container>
+            <Container fluid className="mt-5">
+                <GymCard />
+            </Container>
+            <Container fluid className="mt-5">
+                <CourtCard />
             </Container>
 
         </div>

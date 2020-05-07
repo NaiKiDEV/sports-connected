@@ -7,17 +7,32 @@ function MembershipCard() {
             <Card className="text-light modal-header">
                 <Card.Body>
                     <Card.Title>
-                        NARYSTES
-                        </Card.Title>
+                        <h2>NARYSTES</h2>
+                    </Card.Title>
                     <Container>
-                        <Row >
+                        <Row className="mb-2">
                             <Col >
                                 GYM+ - <span className="text-success">aktyvus</span>
                             </Col>
                         </Row>
-                        <Row >
+                        <Row className="mb-2">
                             <Col >
                                 VSFITNESS - <span className="text-danger">nesumoketa</span>
+                            </Col>
+                        </Row>
+                        <Row className="mb-2">
+                            <Col >
+                                Treneris Jonas - <span className="text-success">aktyvus</span>
+                            </Col>
+                        </Row>
+                        <Row className="mb-2">
+                            <Col >
+                                Nemuno salos kortai - <span className="text-danger">nesumoketa</span>
+                            </Col>
+                        </Row>
+                        <Row className="mb-2">
+                            <Col >
+                                Treneris Petras - <span className="text-info">mokejimas vyksta</span>
                             </Col>
                         </Row>
                     </Container>
