@@ -58,7 +58,7 @@ function LoginModal(props) {
                     props.onModalClick();
                     history.push("/dashboard");
                 } else {
-                    //alert(a.message);
+                    alert(a.message);
                     dispatch(setError(a.message));
                     props.onAlertClick();
                 }
@@ -89,7 +89,7 @@ function LoginModal(props) {
                         </Form.Group>
                         <Row>
                             <Col sm="8" className="pt-3">
-                                <a href="/forgot-password" ><p className="mb-0">Pamiršote slaptažodį?</p></a>
+                                <a href="#" onClick={() => history.push("/forgot-password")} ><p className="mb-0">Pamiršote slaptažodį?</p></a>
                             </Col>
                             <Col sm="4">
                                 <Button className="float-right btn-loginsubmit text-bold text-uppercase" variant="link" type="submit" >Prisijungti</Button>

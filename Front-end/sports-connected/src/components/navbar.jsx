@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useHistory } from 'react';
 import LoginButton from "./login";
 import RegisterButton from "./register";
 import LoginModal from './LoginModal';

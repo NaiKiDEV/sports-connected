@@ -4,7 +4,7 @@ import { Card, Container, Row, Col } from 'react-bootstrap';
 function MembershipCard() {
     return (
         <div>
-            <Card className="text-light modal-header">
+            <Card className="text-light modal-header ml-3">
                 <Card.Body>
                     <Card.Title>
                         <h2>NARYSTES</h2>
@@ -33,6 +33,11 @@ function MembershipCard() {
                         <Row className="mb-2">
                             <Col >
                                 Treneris Petras - <span className="text-info">mokejimas vyksta</span>
+                            </Col>
+                        </Row>
+                        <Row className="mb-2">
+                            <Col >
+                                Sport Club - <span className="text-info">mokejimas vyksta</span>
                             </Col>
                         </Row>
                     </Container>

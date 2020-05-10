@@ -5,7 +5,7 @@ import SingleTrainer from './singletrainer';
 function TrainerCard() {
     return <Container>
         <Card className="text-light modal-header">
-            <Card.Body className="h-200">
+            <Card.Body className="pb-0">
                 <Card.Title>
                     <h2>TRENERIAI</h2>
                 </Card.Title>

@@ -9,23 +9,24 @@ import TrainerCard from './trainercard';
 function Dashboard() {
     return (
         <div>
-            <Container fluid className="mt-5">
+            <Container fluid className="mt-5 mb-5">
                 <Row>
-                    <Col md={{ span: 8, offset: 2 }}>
+                    <Col md={{ span: 5 }}>
                         <MembershipCard />
+                    </Col>
+                    <Col md={{ span: 7 }}>
+                        <TrainerCard />
+                    </Col>
+                </Row>
+                <Row className="mt-5">
+                    <Col md={{ span: 6 }}>
+                        <GymCard />
+                    </Col>
+                    <Col md={{ span: 6 }}>
+                        <CourtCard />
                     </Col>
                 </Row>
             </Container>
-            <Container fluid className="mt-5">
-                <TrainerCard />
-            </Container>
-            <Container fluid className="mt-5">
-                <GymCard />
-            </Container>
-            <Container fluid className="mt-5">
-                <CourtCard />
-            </Container>
-
         </div>
     )
 }

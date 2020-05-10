@@ -55,10 +55,10 @@ function RegisterModal(props) {
             .then(res => res.json())
             .then(a => {
                 if (a.error === false) {
-                    //alert(a.message);
+                    alert(a.message);
                     props.onModalClick();
                 } else {
-                    //alert(a.message);
+                    alert(a.message);
                     dispatch(setError(a.message));
                     props.onAlertClick();
                 }

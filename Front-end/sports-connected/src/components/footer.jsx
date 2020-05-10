@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 function Footer() {
 
-    return <div className="modal-header mt-3">
+    return <div className="modal-header mt-3 py-5">
         <Container>
             <Row>
                 <Col className="text-center">
