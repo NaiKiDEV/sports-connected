@@ -16,7 +16,7 @@ class CarouselScreen extends Component {
                             src={image1}
                             alt="First slide"
                         />
-                        <image1 />
+
                         <Carousel.Caption>
                             <h2 className="text-bold">SPORTSCONNECTED FOR EVERYONE</h2>
                             <p>Go ahead and create your account now to see all the new hot offers ranging from gym's to personal trainers. Upgrade your game right NOW!</p>

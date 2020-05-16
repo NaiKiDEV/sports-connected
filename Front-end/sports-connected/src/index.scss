@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p.text-logo{
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.6rem;
+  color: white !important;
+  transition: color 0.2s ease-in-out;
+}
+p.text-logo:hover
+{
+  color: #5BC0BE !important;
+}
+
+
+.navbar-color{
+  background-color: #0B132B !important;
+}
+
+.background-tint {
+  filter: saturate(50%) brightness(40%);
+}
+
+.text-bold{
+  font-weight: bold;
+}
+
+.carousel-image{
+  width: 100%;
+  height: 45vw;
+}
+
+.btn-navbar {
+  width: 175px;
+  border-radius: 20px;
+  border: #5BC0BE solid 2px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none !important;
+  color: white !important;
+}
+.btn-login {
+  width: 125px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: white !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+.btn-login:hover{
+  letter-spacing: 3px;
+}
+
+.btn-register {
+  color: white !important;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-register:hover{
+  letter-spacing: 2px;
+  background-color: #5BC0BE;
+  color: black !important;
+}
+
+.bg-category{
+  background-color: #0B132B;
+  color: white;
+}
+
+.text-uppercase{
+  text-transform: uppercase;
+}
+
+.text-blackfont{
+  font-weight: 900;
+}
+
+.category-logo{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.profile-logo{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0px solid white;
+}
+
+.feature-card{
+  border-radius: 2px;
+}
+
+.cta-window{
+  background-color: #0B132B;
+  color: white;
+}
+
+.text-darkblue{
+  color: #0B132B;
+}
+.modal-content  {
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important; 
+  border: 0px !important;
+  background-color: #1C2541;
+  color: #5BC0BE;
+  font-size: 12px;
+}
+.modal-header
+{
+  border-radius: 0px !important;
+  border: 0px !important;
+  background-color: #0B132B;
+  color: white;
+}
+.btn-loginsubmit {
+  //width: 125px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: white !important;
+  text-decoration: none !important;
+  text-align: center; 
+}
+.border-zero
+{
+  border-radius: 0px !important;
+  border: 0px !important;
+}
+.submit-text
+{
+  font-size: 22px;
+}
+.close-button{
+  color: white;
+  font-size: 20px;
+}
+.close-button:hover{
+  color: #CCC;
+  font-size: 20px;
+  cursor: pointer;
+}
+.viewheight-100{
+  height: 100vh;
+}
+.alert-absolute{
+  position: absolute;
+  z-index: 10000;
+  margin-top: 2vh;
+  margin-left: 82vw;
+}
+.height-200{
+  height: 200px;
+}
+.trainer-logo{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 400%;
+  transform: rotate(90deg) translateX(-100vh);
+  transform-origin: top left;
+}
+.outer-wrapper{
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y:scroll;
+  //overflow-x:hidden;
+  position: absolute;
+}

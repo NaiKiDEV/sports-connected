@@ -5,7 +5,7 @@ class RegisterButton extends Component {
     state = {}
     render() {
         return (
-            <Button variant="link" className="mx-1 btn-navbar btn-register text-dark">REGISTRUOTIS</Button>
+            <Button variant="link" className="mx-1 btn-navbar btn-register text-dark" onClick={this.props.onClick}>REGISTRUOTIS</Button>
         );
     }
 }

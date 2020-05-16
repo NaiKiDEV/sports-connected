@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/9f867391-ae07-4ee6-a0e0-2fa915dd453e/resourceGroups/SportConnected/providers/Microsoft.Web/sites/SportsConnectedFront",
+    "appService.deploySubpath": ""
+}
