@@ -43,7 +43,15 @@ namespace SportsConnected
 
             // Dependency Injection
             services.AddScoped<IUsersService, UsersService>();
-            
+            services.AddScoped<IOffersService, OffersService>();
+            services.AddScoped<IGymsService, GymsService>();
+            services.AddScoped<ICourtsService, CourtsService>();
+
+            services.AddMvc()
+                .AddJsonOptions(
+                    options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

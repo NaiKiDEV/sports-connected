@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SportsConnected.Context;
 
 namespace SportsConnected.Migrations
 {
     [DbContext(typeof(SportsConnectedContext))]
-    partial class SportsConnectedContextModelSnapshot : ModelSnapshot
+    [Migration("20200515192150_added-offers-courts-gyms2")]
+    partial class addedofferscourtsgyms2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,10 +43,6 @@ namespace SportsConnected.Migrations
                     b.HasIndex("OwnerId");
 
                     b.ToTable("Courts");
-
-                    b.HasData(
-                        new { Id = new Guid("ae7294a6-c11e-4621-a481-9797b63095f3"), CourtType = "Basketball", Description = "Krepsinio aikstele su kokybiska danga ir james bluntu", FullAdress = "Kaunas 123g", ImageUrl = "www.gogle.lt", OwnerId = new Guid("0063ff14-101c-4570-ae83-a6c639ba9a9a"), Title = "Naujausia krepsinio aikstele" }
-                    );
                 });
 
             modelBuilder.Entity("SportsConnected.Entities.Gym", b =>
@@ -67,10 +65,6 @@ namespace SportsConnected.Migrations
                     b.HasIndex("OwnerId");
 
                     b.ToTable("Gyms");
-
-                    b.HasData(
-                        new { Id = new Guid("34ad3b00-07e3-47f9-aac2-0550ee4941b3"), Description = "Sportuot arba prasileisi", FullAdress = "Rajono gatve, Ketvirtas kampas", ImageUrl = "www.ateiniCia.lt", OwnerId = new Guid("0063ff14-101c-4570-ae83-a6c639ba9a9a"), Title = "Rajonska sportan klub" }
-                    );
                 });
 
             modelBuilder.Entity("SportsConnected.Entities.Offer", b =>
@@ -94,16 +88,7 @@ namespace SportsConnected.Migrations
 
                     b.HasIndex("CourtId");
 
-                    b.HasIndex("GymId");
-
                     b.ToTable("Offers");
-
-                    b.HasData(
-                        new { Id = new Guid("d78e09e6-b3db-4f9c-af23-6e6dadace7e1"), Description = "Toks geras gym, wow, ..as asd alkf alk", GymId = new Guid("34ad3b00-07e3-47f9-aac2-0550ee4941b3"), ImageUrl = "asda.lt", Price = 12.0, Title = "Pasiulymas" },
-                        new { Id = new Guid("250d5a43-1536-4f0a-b953-bc96036dbc07"), Description = "asdas dasasdasd asd asdas", GymId = new Guid("34ad3b00-07e3-47f9-aac2-0550ee4941b3"), ImageUrl = "asaada.lt", Price = 11.0, Title = "Pasiulymas antras" },
-                        new { Id = new Guid("20775a9c-7d71-45ca-9e2f-7c41224bb6b6"), CourtId = new Guid("ae7294a6-c11e-4621-a481-9797b63095f3"), Description = "courtas pirmassss as dasd asdas ", ImageUrl = "court.com", Price = 14.0, Title = "Pasiulymaasdas" },
-                        new { Id = new Guid("3988e52f-51db-424a-bbfc-069b6fb99961"), CourtId = new Guid("ae7294a6-c11e-4621-a481-9797b63095f3"), Description = "Cia courtas du", ImageUrl = "qewwq.lt", Price = 113.0, Title = "Pasiulymas court antras" }
-                    );
                 });
 
             modelBuilder.Entity("SportsConnected.User", b =>
@@ -130,10 +115,6 @@ namespace SportsConnected.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new { Id = new Guid("0063ff14-101c-4570-ae83-a6c639ba9a9a"), Email = "jonax@gmail.com", IsSportGymAdmin = true, IsSportGymCourtAdmin = true, IsTrainer = true, IsUser = true, Name = "Jonas", Password = "Jonas123", Surname = "Jonaitis" }
-                    );
                 });
 
             modelBuilder.Entity("SportsConnected.Entities.Court", b =>
@@ -160,7 +141,7 @@ namespace SportsConnected.Migrations
 
                     b.HasOne("SportsConnected.Entities.Gym", "Gym")
                         .WithMany("Offers")
-                        .HasForeignKey("GymId");
+                        .HasForeignKey("CourtId");
                 });
 #pragma warning restore 612, 618
         }

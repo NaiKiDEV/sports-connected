@@ -53,7 +53,7 @@ namespace SportsConnected.Services
                 if (user.Password != login.Password)
                 {
                     message = "Password does not match";
-                    
+                    user = null;
                 }
                 else 
                 {
