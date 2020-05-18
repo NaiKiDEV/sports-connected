@@ -46,6 +46,26 @@ namespace SportsConnected.Services
             return new ResponseResult<Court> { Error = false, Message = "Returned successfully", ReturnResult = court };
         }
 
+        public async Task<ResponseResult<Court>> DeleteCourt(Guid courtId)
+        {
+            var court = GetCourt(courtId).Result.ReturnResult;
+            bool flag = false;
+            string message = "";
+            try
+            {
+                _context.Courts.Remove(court);
+                message = "Court deleted successfully";
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                flag = true;
+                message = ex.Message;
+                return new ResponseResult<Court> { Error = flag, Message = message, ReturnResult = court };
+            }
+            return new ResponseResult<Court> { Error = flag, Message = message, ReturnResult = null };
+        }
+
         public async Task<ResponseResult<ICollection<Court>>> GetCourtsByOwnerId(Guid ownerId)
         {
             var courts = _context.Courts.Include(x=>x.Offers).Where(x => x.OwnerId == ownerId).ToList();

@@ -12627,11 +12627,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\K\\Desktop\\sports-connected\\sp\\sports-connected\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
+      "projectUniqueName": "C:\\Users\\K\\Desktop\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
       "projectName": "SportsConnected",
-      "projectPath": "C:\\Users\\K\\Desktop\\sports-connected\\sp\\sports-connected\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
+      "projectPath": "C:\\Users\\K\\Desktop\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
       "packagesPath": "C:\\Users\\K\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\K\\Desktop\\sports-connected\\sp\\sports-connected\\sports-connected\\Back-end\\SportsConnected\\obj\\",
+      "outputPath": "C:\\Users\\K\\Desktop\\sports-connected\\Back-end\\SportsConnected\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\K\\AppData\\Roaming\\NuGet\\NuGet.Config",
