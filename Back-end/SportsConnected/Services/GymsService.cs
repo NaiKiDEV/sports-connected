@@ -48,6 +48,26 @@ namespace SportsConnected.Services
             return new ResponseResult<Gym> { Error = false, Message = "Returned successfully", ReturnResult = result };
         }
 
+        public async Task<ResponseResult<Gym>> DeleteGym(Guid gymId)
+        {
+            var gym = GetGym(gymId).Result.ReturnResult;
+            bool flag = false;
+            string message = "";
+            try
+            {
+                var result = _context.Gyms.Remove(gym);
+                message = "Gym deleted successfully";
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                flag = true;
+                message = ex.Message;
+                return new ResponseResult<Gym> { Error = false, Message = "Returned successfully", ReturnResult = gym };
+            }
+            return new ResponseResult<Gym> { Error = false, Message = "Returned successfully", ReturnResult = null };
+        }
+
         public async Task<ResponseResult<ICollection<Gym>>> GetGymsByOwnerId(Guid userId)
         {
             var result = _context.Gyms.Include(x=>x.Offers).Where(a => a.OwnerId == userId).ToList();

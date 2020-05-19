@@ -43,6 +43,13 @@ namespace SportsConnected.Controllers
             return result;
         }
 
+        [HttpDelete("{gymId}")]
+        public async Task<ResponseResult<Gym>> DeleteGym(Guid gymId)
+        {
+            var result = await _gymsService.DeleteGym(gymId);
+            return result;
+        }
+
 
         [HttpPost]
         public async Task<ActionResult<ResponseResult<Gym>>> AddNewCourt([FromBody] Gym gym)

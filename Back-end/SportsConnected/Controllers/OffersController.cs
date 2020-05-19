@@ -57,5 +57,11 @@ namespace SportsConnected.Controllers
             return result;
         }
 
+        [HttpDelete("{offerId}")]
+        public async Task<ActionResult<ResponseResult<Offer>>> DeleteOffer(Guid offerId)
+        {
+            var result = await _offersService.DeleteOffer(offerId);
+            return result;
+        }
     }
 }
