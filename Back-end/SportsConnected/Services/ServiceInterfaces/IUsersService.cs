@@ -12,5 +12,6 @@ namespace SportsConnected.Services.ServiceInterfaces
         Task<ResponseResult<User>> ValidateUserLogin(LoginFormModel login);
         Task<ResponseResult<User>> AddNewUser(User newUser);
         Task<ResponseResult<ICollection<User>>> GetAllUsers();
+        Task<ResponseResult<User>> UpdateUser(User user);
     }
 }

@@ -41,5 +41,12 @@ namespace SportsConnected.Controllers
             var result = await _usersService.GetAllUsers();
             return result;
         }
+
+        [HttpPut]
+        public async Task<ActionResult<ResponseResult<User>>> UpdateUser([FromBody]User user)
+        {
+            var result = await _usersService.UpdateUser(user);
+            return result;
+        }
     }
 }
