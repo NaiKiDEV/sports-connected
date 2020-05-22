@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import { Switch, Route } from "react-router-dom";
 import NavBar from './components/navbar';
 import ProfilePage from './components/profilepage';
+import GymPage from './components/gympage';
 import { useSelector } from 'react-redux';
 
 
@@ -29,6 +30,16 @@ function AllowProfileAccess() {
   return <UnauthorizedAccess />
 }
 
+function AllowGymAccess() {
+  const { isLoggedIn } = useSelector(state => state.user);
+
+  if (isLoggedIn) {
+    return <GymPage />
+  }
+
+  return <UnauthorizedAccess />
+}
+
 function App() {
   return (
     <div>
@@ -42,6 +53,9 @@ function App() {
         </Route>
         <Route exact path="/profile">
           <AllowProfileAccess />
+        </Route>
+        <Route exact path="/gyms">
+          <AllowGymAccess />
         </Route>
       </Switch>
       <Footer />
