@@ -187,3 +187,6 @@ p.text-logo:hover
   //overflow-x:hidden;
   position: absolute;
 }
+tbody + thead{
+  display: none;
+}

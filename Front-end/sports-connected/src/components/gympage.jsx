@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import SingleGym from './singlegym';
+import MembershipCard from './membershipCard';  
+import CourtCard from './courtcard';
+import TrainerCard from './trainercard';
+import Table from 'react-bootstrap/Table';
+import { MDBDataTable } from 'mdbreact';
+
 
 function DisplayGyms(props) {
     return props.gymArray.map(element => <SingleGym key={element.id} name={element.title} url={element.imageUrl} status="Laukiama pavedimo" ></SingleGym>);
@@ -32,23 +38,110 @@ function GymCard() {
                 }
             });
     }
-
     useEffect(() => {
         GetAllGyms();
     }, []);
-
-    return <Container className="pr-0 mt-2">
+        const data = {
+          columns: [
+            {
+              label: 'Vardas',
+              field: 'name',
+              sort: 'asc',
+              width: 150
+            },
+            {
+              label: 'Pavardė',
+              field: 'surname',
+              sort: 'asc',
+              width: 270
+            },
+            {
+              label: 'Telefono numeris',
+              field: 'phone',
+              sort: 'asc',
+              width: 200
+            },
+            {
+              label: 'Sutarties sudarymo data',
+              field: 'startdate',
+              sort: 'asc',
+              width: 100
+            },
+            {
+              label: 'Sutarties pabaigos data',
+              field: 'enddate',
+              sort: 'asc',
+              width: 150
+            },
+            {
+              label: 'Sutarties tipas',
+              field: 'type',
+              sort: 'asc',
+              width: 100
+            }, 
+            {
+                label: 'Ar sutartis apmokėta',
+                field: 'paid',
+                sort: 'asc',
+                width: 100
+            }
+          ],
+          rows: [
+            {
+              name: 'Čepas',
+              surname: 'Čepovič',
+              phone: '+370 6124230',
+              office: 'c.cepovic@gmail.com',
+              startdate: '2019-04-20',
+              enddate: '2021-04-20',
+              type: 'Visos dienos',
+              paid: 'Taip'
+            },
+            {
+              name: 'Greičius',
+              surname: 'Greičovič',
+              phone: '+370 60273210',
+              startdate: '2001-01-09',
+              enddate: '2002-01-03',
+              type: 'Puse dienos',
+              paid: 'NE'
+            },
+            {
+                name: 'Gečas',
+                surname: 'Gečovič',
+                phone: '+370 66155642',
+                startdate: '2016-01-09',
+                enddate: '2020-01-03',
+                type: 'Visos dienos',
+                paid: 'Taip'
+              }
+            ]
+        };
+    return <Container fluid className="mt-5 mb-5">
         <Card className="text-light modal-header">
             <Card.Body className="pb-0">
                 <Card.Title>
-                    <h2>SPORTO SALES</h2>
+                    <h2>GYM ADMIN</h2>  
                 </Card.Title>
-                <Row>
-                    <DisplayGyms gymArray={gyms} />
-                </Row>
             </Card.Body>
         </Card>
-    </Container >
+        <Container fluid className="mt-5 mb-5">
+                <Row>
+                    <Col md={{ span: 5 }}>
+                        <MembershipCard />
+                    </Col>
+                    <Col md={{ span: 7 }}>
+                        <TrainerCard />
+                    </Col>
+                </Row>
+            </Container>
+        <MDBDataTable
+      striped
+      bordered
+      data={data}
+    />
+    </Container >   
 }
+
 
 export default GymCard;
