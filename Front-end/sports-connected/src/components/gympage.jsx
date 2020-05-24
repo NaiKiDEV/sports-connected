@@ -137,7 +137,11 @@ function GymCard() {
             </Container>
         <MDBDataTable
       striped
-      bordered
+      borderless
+      entriesLabel='Rodyti'
+      info={false}
+      searchLabel='Paieška'
+      paginationLabel={['Praeitas', 'Sekantis']}
       data={data}
     />
     </Container >   
