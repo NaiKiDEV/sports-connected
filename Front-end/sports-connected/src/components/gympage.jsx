@@ -3,6 +3,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import SingleGym from './singlegym';
 import MembershipCard from './membershipCard';  
 import GymOffers from './gymoffers';  
+import GymUserStats from './gymUserStats';
 import CourtCard from './courtcard';
 import TrainerCard from './trainercard';
 import Table from 'react-bootstrap/Table';
@@ -10,12 +11,12 @@ import { MDBDataTable } from 'mdbreact';
 
 
 function DisplayGyms(props) {
-    return props.gymArray.map(element => <SingleGym key={element.id} name={element.title} url={element.imageUrl} status="Laukiama pavedimo" ></SingleGym>);
+  return props.gymArray.map(element => <SingleGym key={element.id} name={element.title} url={element.imageUrl} status="Laukiama pavedimo" ></SingleGym>);
 }
 
 function GymCard() {
 
-    const [gyms, setGyms] = useState([]);
+  const [gyms, setGyms] = useState([]);
 
     function GetAllGyms() {
         fetch("https://localhost:44316/api/gyms",
@@ -148,6 +149,7 @@ function GymCard() {
                 </Row>
             </Container>
         <MDBDataTable
+
       striped
       borderless
       entriesLabel='Rodyti'
@@ -157,7 +159,7 @@ function GymCard() {
       noRecordsFoundLabel="Nerasta elementų"
       data={data}
     />
-    </Container >   
+  </Container >
 }
 
 
