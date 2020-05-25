@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import SingleGym from './singlegym';
 import MembershipCard from './membershipCard';  
+import GymOffers from './gymoffers';  
 import CourtCard from './courtcard';
 import TrainerCard from './trainercard';
 import Table from 'react-bootstrap/Table';
@@ -62,6 +63,12 @@ function GymCard() {
               width: 200
             },
             {
+              label: 'El. paštas',
+              field: 'email',
+              sort: 'asc',
+              width: 200
+            },
+            {
               label: 'Sutarties sudarymo data',
               field: 'startdate',
               sort: 'asc',
@@ -91,7 +98,7 @@ function GymCard() {
               name: 'Čepas',
               surname: 'Čepovič',
               phone: '+370 6124230',
-              office: 'c.cepovic@gmail.com',
+              email: 'c.cepovic@gmail.com',
               startdate: '2019-04-20',
               enddate: '2021-04-20',
               type: 'Visos dienos',
@@ -101,6 +108,7 @@ function GymCard() {
               name: 'Greičius',
               surname: 'Greičovič',
               phone: '+370 60273210',
+              email: 'g.greicovic@gmail.com',
               startdate: '2001-01-09',
               enddate: '2002-01-03',
               type: 'Puse dienos',
@@ -110,6 +118,7 @@ function GymCard() {
                 name: 'Gečas',
                 surname: 'Gečovič',
                 phone: '+370 66155642',
+                email: 'g.gecovic@gmail.com',
                 startdate: '2016-01-09',
                 enddate: '2020-01-03',
                 type: 'Visos dienos',
@@ -127,11 +136,14 @@ function GymCard() {
         </Card>
         <Container fluid className="mt-5 mb-5">
                 <Row>
-                    <Col md={{ span: 5 }}>
+                    <Col md={{ span: 4 }}>
                         <MembershipCard />
                     </Col>
-                    <Col md={{ span: 7 }}>
-                        <TrainerCard />
+                    <Col md={{ span: 4 }}>
+                        <MembershipCard />
+                    </Col>
+                    <Col md={{ span: 4 }}>
+                        <GymOffers />
                     </Col>
                 </Row>
             </Container>

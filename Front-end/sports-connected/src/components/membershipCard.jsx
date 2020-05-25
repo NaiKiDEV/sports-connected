@@ -5,7 +5,7 @@ function MembershipCard() {
     return (
         <div>
             <Card className="text-light modal-header ml-3">
-                <Card.Body>
+                <Card.Body >
                     <Card.Title>
                         <h2>NARYSTES</h2>
                     </Card.Title>

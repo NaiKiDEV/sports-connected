@@ -187,6 +187,43 @@ p.text-logo:hover
   //overflow-x:hidden;
   position: absolute;
 }
+.offers{
+  background-color: #000a28;
+  //border: 1px solid #6FFFE9;
+  //border-radius: 6px;
+}
+.btn-add
+{
+  width: 125px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: white !important;
+  text-decoration: none !important;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+}
+.btn-add:hover{
+  color: #5BC0BE !important;
+}
+.offer-delete
+{
+  color: #D01B2F !important;
+  transition: 0.2s ease-in-out;
+}
+.offer-delete:hover
+{
+  color: #992325 !important;
+}
+.offer-edit
+{
+  color: white !important;
+  transition: 0.2s ease-in-out;
+}
+.offer-edit:hover
+{
+  color: #5BC0BE !important;
+}
 tbody + thead{
   display: none;
 }
