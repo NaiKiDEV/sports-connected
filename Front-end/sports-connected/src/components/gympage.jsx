@@ -142,6 +142,7 @@ function GymCard() {
       info={false}
       searchLabel='Paieška'
       paginationLabel={['Praeitas', 'Sekantis']}
+      noRecordsFoundLabel="Nerasta elementų"
       data={data}
     />
     </Container >   
