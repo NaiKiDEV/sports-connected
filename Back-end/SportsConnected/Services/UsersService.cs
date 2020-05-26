@@ -83,7 +83,7 @@ namespace SportsConnected.Services
             await _context.SaveChangesAsync();
             return new ResponseResult<Membership> { Error = false, Message = "All users returned successfully", ReturnResult = membership };
         }
-        public async Task<ResponseResult<Membership>> GetMemberShip(Guid membershipId)
+        public async Task<ResponseResult<Membership>> GetMemberShip(Guid membershipId) 
         {
             var membership = _context.Memberships.Include(u=>u.Offer).Include(u=>u.User).FirstOrDefault(x => x.Id == membershipId);
             return new ResponseResult<Membership> { Error = false, Message = "All users returned successfully", ReturnResult = membership };
