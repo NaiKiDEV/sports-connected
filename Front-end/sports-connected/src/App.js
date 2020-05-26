@@ -7,6 +7,9 @@ import { Switch, Route } from "react-router-dom";
 import NavBar from './components/navbar';
 import ProfilePage from './components/profilepage';
 import GymPage from './components/gympage';
+import Gyms from './components/gyms';
+import Trainers from './components/trainers';
+import Courts from './components/courts';
 import { useSelector } from 'react-redux';
 
 
@@ -54,8 +57,17 @@ function App() {
         <Route exact path="/profile">
           <AllowProfileAccess />
         </Route>
-        <Route exact path="/gyms">
+        <Route exact path="/admindashboard">
           <AllowGymAccess />
+        </Route>
+        <Route exact path="/gyms">
+          <Gyms />
+        </Route>
+        <Route exact path="/trainers">
+          <Trainers />
+        </Route>
+        <Route exact path="/courts">
+          <Courts/>
         </Route>
       </Switch>
       <Footer />

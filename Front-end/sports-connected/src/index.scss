@@ -91,7 +91,17 @@ p.text-logo:hover
   border-radius: 50%;
   border: 3px solid white;
 }
-
+.gym-logo{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #5BC0BE;
+}
+.gym-border{
+  border-bottom: 3px solid #0B132B;
+  border-radius: 50px;
+  width: 97%;
+}
 .profile-logo{
   width: 40px;
   height: 40px;
@@ -204,6 +214,41 @@ p.text-logo:hover
   text-align: center;
 }
 .btn-add:hover{
+  color: #5BC0BE !important;
+}
+.btn-more
+{
+  width: 125px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #0B132B !important;
+  text-decoration: none !important;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+}
+.btn-more:hover{
+  color: #5BC0BE !important;
+}
+.btn-orderdesign {
+  width: 175px;
+  border-radius: 20px;
+  border: #0B132B solid 2px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none !important;
+  color: white !important;
+}
+.btn-order
+{
+  color: #0B132B !important;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+}
+.btn-order:hover{
+  letter-spacing: 2px;
+  background-color: #0B132B;
   color: #5BC0BE !important;
 }
 .offer-delete

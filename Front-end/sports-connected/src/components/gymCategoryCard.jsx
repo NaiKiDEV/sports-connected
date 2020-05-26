@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-class CategoryCard extends Component {
+class GymCategoryCard extends Component {
     render() {
         return (
             <Container fluid className="text-center my-3">
@@ -13,9 +13,14 @@ class CategoryCard extends Component {
                         <Button href={this.props.learnMoreUrl} variant="link" className="mx-1 btn-navbar btn-register text-dark">{this.props.buttontext}</Button>
                     </Col>
                 </Row>
+                <Row>
+                    <Col md={{ span: 8, offset: 2 }} >
+                        <Button href={this.props.learnMoreUrl} variant="link" className="mx-1 btn-login text-dark">DAUGIAU</Button>
+                    </Col>
+                </Row>
             </Container>
         );
     }
 }
 
-export default CategoryCard;
+export default GymCategoryCard;

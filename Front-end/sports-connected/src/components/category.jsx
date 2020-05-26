@@ -11,17 +11,17 @@ class Category extends Component {
                 <h1 className="pt-5 text-center text-uppercase text-bold">Siulomos paslaugos</h1>
                 <Row className="py-5">
                     <Col md="4">
-                        <CategoryCard logoUrl="https://picsum.photos/400/400?random=1" title="Sporto Salės" learnMoreUrl="#">
+                        <CategoryCard logoUrl="https://picsum.photos/400/400?random=1" title="Sporto Salės" learnMoreUrl="gyms" buttontext="DAUGIAU !">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nesciunt tempora perferendis suscipit voluptates.
                         </CategoryCard>
                     </Col>
                     <Col md="4">
-                        <CategoryCard logoUrl="https://picsum.photos/400/400?random=2" title="Treneriai" learnMoreUrl="#">
+                        <CategoryCard logoUrl="https://picsum.photos/400/400?random=2" title="Treneriai" learnMoreUrl="trainers" buttontext="DAUGIAU !">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nesciunt tempora perferendis suscipit voluptates.
                         </CategoryCard>
                     </Col>
                     <Col md="4">
-                        <CategoryCard logoUrl="https://picsum.photos/400/400?random=3" title="Sporto Aikštelės" learnMoreUrl="#">
+                        <CategoryCard logoUrl="https://picsum.photos/400/400?random=3" title="Sporto Aikštelės" learnMoreUrl="courts" buttontext="DAUGIAU !">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nesciunt tempora perferendis suscipit voluptates.
                         </CategoryCard>
                     </Col>
