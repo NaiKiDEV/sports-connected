@@ -43,7 +43,7 @@ function LoginModal(props) {
             .then(a => {
                 if (a.error === false) {
                     const { returnResult } = a;
-                    alert(a.message);
+                    //alert(a.message);
                     console.log(a);
                     dispatch(logUser(true));
                     dispatch(setData({
@@ -59,7 +59,7 @@ function LoginModal(props) {
                     props.onModalClick();
                     history.push("/dashboard");
                 } else {
-                    alert(a.message);
+                    //alert(a.message);
                     dispatch(setError(a.message));
                     props.onAlertClick();
                 }

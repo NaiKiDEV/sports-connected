@@ -13,6 +13,9 @@ function NavbarUser(props) {
     const { isLoggedIn } = useSelector(state => state.user);
     if (isLoggedIn) {
         return <Form inline>
+            <div className="text-light mr-4">
+                <h6 className="mb-0"> Balansas: 15.99 €</h6>
+            </div>
             <ProfileIcon></ProfileIcon>
         </Form>;
     }

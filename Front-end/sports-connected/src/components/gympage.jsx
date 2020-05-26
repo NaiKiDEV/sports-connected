@@ -96,30 +96,126 @@ function GymCard() {
     ],
     rows: [
       {
-        name: 'Čepas',
-        surname: 'Čepovič',
+        name: 'Jonas',
+        surname: 'Granauskas',
         phone: '+370 6124230',
-        email: 'c.cepovic@gmail.com',
+        email: 'granauskas@gmail.com',
         startdate: '2019-04-20',
         enddate: '2021-04-20',
         type: 'Visos dienos',
         paid: 'Taip'
       },
       {
-        name: 'Greičius',
-        surname: 'Greičovič',
+        name: 'Petras',
+        surname: 'Popovicius',
         phone: '+370 60273210',
-        email: 'g.greicovic@gmail.com',
+        email: 'popovicpetras@gmail.com',
         startdate: '2001-01-09',
         enddate: '2002-01-03',
         type: 'Puse dienos',
-        paid: 'NE'
+        paid: 'Ne'
       },
       {
-        name: 'Gečas',
-        surname: 'Gečovič',
+        name: 'Julijus',
+        surname: 'Kazlauskas',
         phone: '+370 66155642',
-        email: 'g.gecovic@gmail.com',
+        email: 'julijus19@gmail.com',
+        startdate: '2016-01-09',
+        enddate: '2020-01-03',
+        type: 'Visos dienos',
+        paid: 'Taip'
+      }
+      ,
+      {
+        name: 'Iveta',
+        surname: 'Malakauskiene',
+        phone: '+370 66155642',
+        email: 'iveta.mal@gmail.com',
+        startdate: '2016-01-09',
+        enddate: '2020-01-03',
+        type: 'Visos dienos',
+        paid: 'Ne'
+      }
+      ,
+      {
+        name: 'Irena',
+        surname: 'Mazoraite',
+        phone: '+370 66155642',
+        email: 'mazoraite.iveta@gmail.com',
+        startdate: '2016-01-09',
+        enddate: '2020-01-03',
+        type: 'Puse dienos',
+        paid: 'Ne'
+      }
+      ,
+      {
+        name: 'Nerijus',
+        surname: 'Urbonas',
+        phone: '+370 66155642',
+        email: 'nerijusart@gmail.com',
+        startdate: '2016-01-09',
+        enddate: '2020-01-03',
+        type: 'Visos dienos',
+        paid: 'Taip'
+      },
+      {
+        name: 'Jonas',
+        surname: 'Granauskas',
+        phone: '+370 6124230',
+        email: 'granauskas@gmail.com',
+        startdate: '2019-04-20',
+        enddate: '2021-04-20',
+        type: 'Visos dienos',
+        paid: 'Taip'
+      },
+      {
+        name: 'Petras',
+        surname: 'Popovicius',
+        phone: '+370 60273210',
+        email: 'popovicpetras@gmail.com',
+        startdate: '2001-01-09',
+        enddate: '2002-01-03',
+        type: 'Puse dienos',
+        paid: 'Ne'
+      },
+      {
+        name: 'Julijus',
+        surname: 'Kazlauskas',
+        phone: '+370 66155642',
+        email: 'julijus19@gmail.com',
+        startdate: '2016-01-09',
+        enddate: '2020-01-03',
+        type: 'Visos dienos',
+        paid: 'Taip'
+      }
+      ,
+      {
+        name: 'Iveta',
+        surname: 'Malakauskiene',
+        phone: '+370 66155642',
+        email: 'iveta.mal@gmail.com',
+        startdate: '2016-01-09',
+        enddate: '2020-01-03',
+        type: 'Visos dienos',
+        paid: 'Ne'
+      }
+      ,
+      {
+        name: 'Irena',
+        surname: 'Mazoraite',
+        phone: '+370 66155642',
+        email: 'mazoraite.iveta@gmail.com',
+        startdate: '2016-01-09',
+        enddate: '2020-01-03',
+        type: 'Puse dienos',
+        paid: 'Ne'
+      }
+      ,
+      {
+        name: 'Nerijus',
+        surname: 'Urbonas',
+        phone: '+370 66155642',
+        email: 'nerijusart@gmail.com',
         startdate: '2016-01-09',
         enddate: '2020-01-03',
         type: 'Visos dienos',
@@ -138,10 +234,10 @@ function GymCard() {
     <Container fluid className="mt-5 mb-5">
       <Row>
         <Col md={{ span: 4 }}>
-          <GymUserStats />
+          <MembershipCard />
         </Col>
         <Col md={{ span: 4 }}>
-          <MembershipCard />
+          <GymUserStats />
         </Col>
         <Col md={{ span: 4 }}>
           <GymOffers />

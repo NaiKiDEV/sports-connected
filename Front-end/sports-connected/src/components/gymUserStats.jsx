@@ -11,10 +11,7 @@ function GymUserStats() {
                 </Card.Title>
                 <Container fluid className="pt-2">
                     <Row className="mb-2">
-                        <Col sm={4} className="d-flex justify-content-start align-items-start">
-
-                        </Col>
-                        <Col sm={6} className="">
+                        <Col sm={10} className="offset-1">
                             <h5><span className="text-success text-uppercase">• aktyvūs</span> 20%</h5>
                             <h5><span className="text-danger text-uppercase">• nesumokėje</span> 30%</h5>
                             <h5><span className="text-disabled text-uppercase">• neaktyvūs</span> 50%</h5>

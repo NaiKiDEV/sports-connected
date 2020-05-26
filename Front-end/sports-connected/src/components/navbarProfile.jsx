@@ -49,12 +49,12 @@ function ProfileIcon() {
     const dispatch = useDispatch();
     return (
         <div>
-            <Dropdown className="">
+            <Dropdown className="" drop="left" >
                 <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
                     <img src="https://flaticons.net/icon.php?slug_category=application&slug_icon=user-profile" alt="logo" className="profile-logo" />
                 </Dropdown.Toggle>
 
-                <Dropdown.Menu as={CustomMenu} className="mb-0 pb-0" alignRight>
+                <Dropdown.Menu as={CustomMenu} className="mb-0 pb-0">
                     <Dropdown.Item eventKey="0" className="dropdown-button" onClick={() => history.push('/dashboard')}>Pagrindinis</Dropdown.Item>
                     <Dropdown.Item eventKey="1" className="dropdown-button" onClick={() => history.push('/profile')}>Profilis</Dropdown.Item>
                     <Dropdown.Item disabled eventKey="2" className="dropdown-button">Narystes</Dropdown.Item>
