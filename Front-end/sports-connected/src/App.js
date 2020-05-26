@@ -54,7 +54,7 @@ function App() {
         <Route exact path="/profile">
           <AllowProfileAccess />
         </Route>
-        <Route exact path="/gyms">
+        <Route exact path="/admindashboard">
           <AllowGymAccess />
         </Route>
       </Switch>

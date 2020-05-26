@@ -46,6 +46,7 @@ p.text-logo:hover
   color: white !important;
 }
 .btn-login {
+  cursor: pointer;
   width: 125px;
   font-weight: 700;
   font-size: 14px;
@@ -208,6 +209,7 @@ p.text-logo:hover
 }
 .offer-delete
 {
+  cursor: pointer;
   color: #D01B2F !important;
   transition: 0.2s ease-in-out;
 }
@@ -217,6 +219,7 @@ p.text-logo:hover
 }
 .offer-edit
 {
+  cursor: pointer;
   color: white !important;
   transition: 0.2s ease-in-out;
 }
@@ -226,4 +229,24 @@ p.text-logo:hover
 }
 tbody + thead{
   display: none;
+}
+.offers_height{
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-color: #1A1B1F #333642;
+  scrollbar-width: thin;
+}
+
+.offers_height::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+.offers_height::-webkit-scrollbar-thumb {
+  background: #1A1B1F;
+  border-radius: 20px;
+}
+
+.offers_height::-webkit-scrollbar-track {
+  background: #333642;
+  border-radius: 5px;
 }

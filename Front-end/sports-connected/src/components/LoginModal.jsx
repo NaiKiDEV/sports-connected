@@ -32,6 +32,7 @@ function LoginModal(props) {
         fetch("https://sportsconnectedback.azurewebsites.net/api/users/validate",
             {
                 method: 'POST',
+                cache: 'no-cache',
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -66,39 +67,37 @@ function LoginModal(props) {
     }
 
     return (
-        <div>
-            <Modal
-                aria-labelledby="contained-modal-title-vcenter"
-                centered
-                show={props.isOpen}
-                onSubmit={() => loginUser()}
-                onHide={props.onModalClick}>
-                <Modal.Header className="login-header">
-                    <Modal.Title className="text-bold text-uppercase">Prisijungimas</Modal.Title>
-                    <i className="close-button fas fa-times" alt="foto" onClick={props.onModalClick} />
-                </Modal.Header>
-                <Modal.Body className="modal-content">
-                    <Form>
-                        <Form.Group controlId="formGroupEmail">
-                            <Form.Label>El. Paštas</Form.Label>
-                            <Form.Control type="email" className="border-zero submit-text" placeholder="" required onChange={e => setEmail(e.target.value)} />
-                        </Form.Group>
-                        <Form.Group className="" controlId="formGroupPassword">
-                            <Form.Label>Slaptažodis</Form.Label>
-                            <Form.Control type="password" className="border-zero submit-text text-bold" placeholder="" required onChange={e => setPassword(e.target.value)} />
-                        </Form.Group>
-                        <Row>
-                            <Col sm="8" className="pt-3">
-                                <a href="#" onClick={() => history.push("/forgot-password")} ><p className="mb-0">Pamiršote slaptažodį?</p></a>
-                            </Col>
-                            <Col sm="4">
-                                <Button className="float-right btn-loginsubmit text-bold text-uppercase" variant="link" type="submit" >Prisijungti</Button>
-                            </Col>
-                        </Row>
-                    </Form>
-                </Modal.Body>
-            </Modal>
-        </div >
+        <Modal
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+            show={props.isOpen}
+            //onSubmit={() => loginUser()}
+            onHide={props.onModalClick}>
+            <Modal.Header className="login-header">
+                <Modal.Title className="text-bold text-uppercase">Prisijungimas</Modal.Title>
+                <i className="close-button fas fa-times" alt="foto" onClick={props.onModalClick} />
+            </Modal.Header>
+            <Modal.Body className="modal-content">
+                <Form>
+                    <Form.Group controlId="formGroupEmail">
+                        <Form.Label>El. Paštas</Form.Label>
+                        <Form.Control type="email" className="border-zero submit-text" placeholder="" required onChange={e => setEmail(e.target.value)} />
+                    </Form.Group>
+                    <Form.Group className="" controlId="formGroupPassword">
+                        <Form.Label>Slaptažodis</Form.Label>
+                        <Form.Control type="password" className="border-zero submit-text text-bold" placeholder="" required onChange={e => setPassword(e.target.value)} />
+                    </Form.Group>
+                    <Row>
+                        <Col sm="8" className="pt-3">
+                            <a href="#" onClick={() => history.push("/forgot-password")} ><p className="mb-0">Pamiršote slaptažodį?</p></a>
+                        </Col>
+                        <Col sm="4">
+                            <Button className="float-right btn-loginsubmit text-bold text-uppercase" variant="link" type="button" onClick={() => loginUser()} >Prisijungti</Button>
+                        </Col>
+                    </Row>
+                </Form>
+            </Modal.Body>
+        </Modal >
     )
 }
 export default LoginModal;

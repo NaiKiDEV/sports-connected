@@ -77,7 +77,9 @@ function RegisterModal(props) {
                     <i className="close-button fas fa-times" alt="foto" onClick={props.onModalClick} />
                 </Modal.Header>
                 <Modal.Body>
-                    <Form onSubmit={() => registerUser()} >
+                    <Form
+                    //onSubmit={() => registerUser()} 
+                    >
                         <Form.Group className="" controlId="formGroupName">
                             <Form.Label>Vardas</Form.Label>
                             <Form.Control type="text" className="border-zero submit-text" placeholder="" onChange={e => setName(e.target.value)} />
@@ -99,7 +101,7 @@ function RegisterModal(props) {
                             </Col>
                             <Col sm=""></Col>
                             <Col sm="4">
-                                <Button className="float-right btn-loginsubmit text-bold text-uppercase" variant="link" type="submit">Registruotis</Button>
+                                <Button className="float-right btn-loginsubmit text-bold text-uppercase" variant="link" type="button" onClick={() => registerUser()}>Registruotis</Button>
                             </Col>
 
                         </Row>

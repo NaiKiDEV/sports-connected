@@ -7,7 +7,7 @@ class LoginButton extends Component {
     render() {
         return (
             <>
-                <a className="mx-1 mr-2 btn-login text-uppercase" href="#"
+                <a className="mx-1 mr-2 btn-login text-uppercase"
                     onClick={this.props.onClick}>PRISIJUNGTI</a>
             </>
         );
