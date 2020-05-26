@@ -12558,11 +12558,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Paulius\\Desktop\\updated sports connected\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
+      "projectUniqueName": "C:\\Users\\Paulius\\Desktop\\sportsconnected\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
       "projectName": "SportsConnected",
-      "projectPath": "C:\\Users\\Paulius\\Desktop\\updated sports connected\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
+      "projectPath": "C:\\Users\\Paulius\\Desktop\\sportsconnected\\sports-connected\\Back-end\\SportsConnected\\SportsConnected.csproj",
       "packagesPath": "C:\\Users\\Paulius\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Paulius\\Desktop\\updated sports connected\\sports-connected\\Back-end\\SportsConnected\\obj\\",
+      "outputPath": "C:\\Users\\Paulius\\Desktop\\sportsconnected\\sports-connected\\Back-end\\SportsConnected\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12620,13 +12620,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Paulius\\Desktop\\updated sports connected\\sports-connected\\Back-end\\SportsConnected\\obj\\SportsConnected.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
