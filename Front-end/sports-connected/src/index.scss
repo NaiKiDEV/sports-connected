@@ -46,6 +46,7 @@ p.text-logo:hover
   color: white !important;
 }
 .btn-login {
+  cursor: pointer;
   width: 125px;
   font-weight: 700;
   font-size: 14px;
@@ -91,7 +92,17 @@ p.text-logo:hover
   border-radius: 50%;
   border: 3px solid white;
 }
-
+.gym-logo{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #5BC0BE;
+}
+.gym-border{
+  border-bottom: 3px solid #0B132B;
+  border-radius: 50px;
+  width: 97%;
+}
 .profile-logo{
   width: 40px;
   height: 40px;
@@ -186,4 +197,101 @@ p.text-logo:hover
   overflow-y:scroll;
   //overflow-x:hidden;
   position: absolute;
+}
+.offers{
+  background-color: #000a28;
+  //border: 1px solid #6FFFE9;
+  //border-radius: 6px;
+}
+.btn-add
+{
+  width: 125px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: white !important;
+  text-decoration: none !important;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+}
+.btn-add:hover{
+  color: #5BC0BE !important;
+}
+.btn-more
+{
+  width: 125px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #0B132B !important;
+  text-decoration: none !important;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+}
+.btn-more:hover{
+  color: #5BC0BE !important;
+}
+.btn-orderdesign {
+  width: 175px;
+  border-radius: 20px;
+  border: #0B132B solid 2px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none !important;
+  color: white !important;
+}
+.btn-order
+{
+  color: #0B132B !important;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+}
+.btn-order:hover{
+  letter-spacing: 2px;
+  background-color: #0B132B;
+  color: #5BC0BE !important;
+}
+.offer-delete
+{
+  cursor: pointer;
+  color: #D01B2F !important;
+  transition: 0.2s ease-in-out;
+}
+.offer-delete:hover
+{
+  color: #992325 !important;
+}
+.offer-edit
+{
+  cursor: pointer;
+  color: white !important;
+  transition: 0.2s ease-in-out;
+}
+.offer-edit:hover
+{
+  color: #5BC0BE !important;
+}
+tbody + thead{
+  display: none;
+}
+.offers_height{
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-color: #1A1B1F #333642;
+  scrollbar-width: thin;
+}
+
+.offers_height::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+.offers_height::-webkit-scrollbar-thumb {
+  background: #1A1B1F;
+  border-radius: 20px;
+}
+
+.offers_height::-webkit-scrollbar-track {
+  background: #333642;
+  border-radius: 5px;
 }

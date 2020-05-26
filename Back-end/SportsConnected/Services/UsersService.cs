@@ -19,6 +19,20 @@ namespace SportsConnected.Services
             _context = context;
         }
 
+        public async Task<ResponseResult<User>> UpdateUser(User user)
+        {
+            try
+            {
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
+                return new ResponseResult<User> { Error = false, Message = "user updated successfully", ReturnResult = user };
+            }
+            catch (Exception ex)
+            {
+                return new ResponseResult<User> { Error = true, Message = ex.Message, ReturnResult = user };
+            }
+        }
+
         public async Task<ResponseResult<User>> AddNewUser(User newUser) {
             var userInDb = _context.Users.FirstOrDefault(u => u.Email == newUser.Email);
             string message;

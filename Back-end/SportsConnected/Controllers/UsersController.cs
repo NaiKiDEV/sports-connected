@@ -43,6 +43,7 @@ namespace SportsConnected.Controllers
             return result;
         }
 
+<<<<<<< HEAD
 
         [HttpGet("{id}")]
         public async Task<ActionResult<ResponseResult<User>>> GetAllUsers(Guid id)
@@ -85,6 +86,14 @@ namespace SportsConnected.Controllers
             return result;
         }
 
+=======
+        [HttpPut]
+        public async Task<ActionResult<ResponseResult<User>>> UpdateUser([FromBody]User user)
+        {
+            var result = await _usersService.UpdateUser(user);
+            return result;
+        }
+>>>>>>> 492f1c43443db62a6a4e0426e4945adfd0d19bbe
     }
 
 }

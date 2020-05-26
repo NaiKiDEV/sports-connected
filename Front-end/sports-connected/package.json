@@ -4,17 +4,25 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.1",
+    "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.0",
     "js-sha256": "^0.9.0",
+<<<<<<< HEAD
     "node-sass": "^4.14.1",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.12.0",
+=======
+    "mdbreact": "^4.26.1",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.13.1",
+>>>>>>> 492f1c43443db62a6a4e0426e4945adfd0d19bbe
     "react-horizontal-scrolling-menu": "^0.7.7",
     "react-redux": "^7.2.0",
-    "react-router-dom": "^5.1.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.0",
     "redux": "^4.0.5",
     "redux-persist": "^6.0.0",

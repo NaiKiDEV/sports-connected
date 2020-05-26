@@ -8,9 +8,9 @@ class CategoryCard extends Component {
                 <Row>
                     <Col md={{ span: 8, offset: 2 }} >
                         <img src={this.props.logoUrl} alt="logo" className="category-logo mb-4" />
-                        <h3 className="text-uppercase py-2">{this.props.title}</h3>
+                        <h3 className="text-uppercase py-2 text-bold">{this.props.title}</h3>
                         <p>{this.props.children}</p>
-                        <Button href={this.props.learnMoreUrl} variant="link" className="mx-1 btn-navbar btn-register text-dark">Daugiau!</Button>
+                        <Button href={this.props.learnMoreUrl} variant="link" className="mx-1 btn-navbar btn-register text-dark">{this.props.buttontext}</Button>
                     </Col>
                 </Row>
             </Container>

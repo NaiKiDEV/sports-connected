@@ -43,7 +43,11 @@ namespace SportsConnected.Migrations
                     b.ToTable("Courts");
 
                     b.HasData(
+<<<<<<< HEAD
                         new { Id = new Guid("7adbb549-8dee-4803-badb-1b7710d80e11"), CourtType = "Basketball", Description = "Krepsinio aikstele su kokybiska danga ir james bluntu", FullAdress = "Kaunas 123g", ImageUrl = "www.gogle.lt", OwnerId = new Guid("55d6eec4-991b-4436-9a5a-dad0605c1848"), Title = "Naujausia krepsinio aikstele" }
+=======
+                        new { Id = new Guid("d3ee2b66-f167-4f05-8ae6-f9dca6165f76"), CourtType = "Basketball", Description = "Krepsinio aikstele su kokybiska danga ir james bluntu", FullAdress = "Kaunas 123g", ImageUrl = "www.gogle.lt", OwnerId = new Guid("c440fd9f-666e-4651-bd25-5a4f4cf41f37"), Title = "Naujausia krepsinio aikstele" }
+>>>>>>> 492f1c43443db62a6a4e0426e4945adfd0d19bbe
                     );
                 });
 
@@ -69,7 +73,11 @@ namespace SportsConnected.Migrations
                     b.ToTable("Gyms");
 
                     b.HasData(
+<<<<<<< HEAD
                         new { Id = new Guid("b4bbbdc7-3293-47d9-88e9-3ce6b4af7a25"), Description = "Sportuot arba prasileisi", FullAdress = "Rajono gatve, Ketvirtas kampas", ImageUrl = "www.ateiniCia.lt", OwnerId = new Guid("55d6eec4-991b-4436-9a5a-dad0605c1848"), Title = "Rajonska sportan klub" }
+=======
+                        new { Id = new Guid("c4998488-23ef-46c0-b05d-2d2ed355dac6"), Description = "Sportuot arba prasileisi", FullAdress = "Rajono gatve, Ketvirtas kampas", ImageUrl = "www.ateiniCia.lt", OwnerId = new Guid("c440fd9f-666e-4651-bd25-5a4f4cf41f37"), Title = "Rajonska sportan klub" }
+>>>>>>> 492f1c43443db62a6a4e0426e4945adfd0d19bbe
                     );
                 });
 
@@ -123,10 +131,17 @@ namespace SportsConnected.Migrations
                     b.ToTable("Offers");
 
                     b.HasData(
+<<<<<<< HEAD
                         new { Id = new Guid("4a49e447-8250-4cae-84c3-b3dabc53d639"), Description = "Toks geras gym, wow, ..as asd alkf alk", GymId = new Guid("b4bbbdc7-3293-47d9-88e9-3ce6b4af7a25"), ImageUrl = "asda.lt", Price = 12.0, Title = "Pasiulymas" },
                         new { Id = new Guid("96bc8d9c-14c7-4947-83ff-d2fb3d58b86d"), Description = "asdas dasasdasd asd asdas", GymId = new Guid("b4bbbdc7-3293-47d9-88e9-3ce6b4af7a25"), ImageUrl = "asaada.lt", Price = 11.0, Title = "Pasiulymas antras" },
                         new { Id = new Guid("4d985087-5304-4621-aeaa-42e60cefc97f"), CourtId = new Guid("7adbb549-8dee-4803-badb-1b7710d80e11"), Description = "courtas pirmassss as dasd asdas ", ImageUrl = "court.com", Price = 14.0, Title = "Pasiulymaasdas" },
                         new { Id = new Guid("d4cc0eee-31e7-4d37-8999-a355be91b8da"), CourtId = new Guid("7adbb549-8dee-4803-badb-1b7710d80e11"), Description = "Cia courtas du", ImageUrl = "qewwq.lt", Price = 113.0, Title = "Pasiulymas court antras" }
+=======
+                        new { Id = new Guid("dd14964b-a760-4c85-b752-369697c3aa62"), Description = "Toks geras gym, wow, ..as asd alkf alk", GymId = new Guid("c4998488-23ef-46c0-b05d-2d2ed355dac6"), ImageUrl = "asda.lt", Price = 12.0, Title = "Pasiulymas" },
+                        new { Id = new Guid("5b76028b-2586-4670-b9cf-043909a6cc28"), Description = "asdas dasasdasd asd asdas", GymId = new Guid("c4998488-23ef-46c0-b05d-2d2ed355dac6"), ImageUrl = "asaada.lt", Price = 11.0, Title = "Pasiulymas antras" },
+                        new { Id = new Guid("44761836-b94d-47f6-b058-0fbd408a4428"), CourtId = new Guid("d3ee2b66-f167-4f05-8ae6-f9dca6165f76"), Description = "courtas pirmassss as dasd asdas ", ImageUrl = "court.com", Price = 14.0, Title = "Pasiulymaasdas" },
+                        new { Id = new Guid("3705e9d6-74c7-4684-8caf-e46211ffb590"), CourtId = new Guid("d3ee2b66-f167-4f05-8ae6-f9dca6165f76"), Description = "Cia courtas du", ImageUrl = "qewwq.lt", Price = 113.0, Title = "Pasiulymas court antras" }
+>>>>>>> 492f1c43443db62a6a4e0426e4945adfd0d19bbe
                     );
                 });
 
@@ -158,7 +173,11 @@ namespace SportsConnected.Migrations
                     b.ToTable("Users");
 
                     b.HasData(
+<<<<<<< HEAD
                         new { Id = new Guid("55d6eec4-991b-4436-9a5a-dad0605c1848"), Email = "jonax@gmail.com", IsSportGymAdmin = true, IsSportGymCourtAdmin = true, IsTrainer = true, IsUser = true, Name = "Jonas", Password = "Jonas123", PhoneNumber = "861234548", Surname = "Jonaitis" }
+=======
+                        new { Id = new Guid("c440fd9f-666e-4651-bd25-5a4f4cf41f37"), Email = "jonax@gmail.com", IsSportGymAdmin = true, IsSportGymCourtAdmin = true, IsTrainer = true, IsUser = true, Name = "Jonas", Password = "Jonas123", Surname = "Jonaitis" }
+>>>>>>> 492f1c43443db62a6a4e0426e4945adfd0d19bbe
                     );
                 });
 

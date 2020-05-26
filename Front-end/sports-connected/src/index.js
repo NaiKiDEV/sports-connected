@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//import 'mdbreact/dist/css/mdb.css';
+//import 'bootstrap-css-only/css/bootstrap.min.css';
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -8,6 +10,9 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 import storeData from './configureStore'
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+//import '@fortawesome/fontawesome-free/css/all.min.css'; 
+
+
 
 
 ReactDOM.render(
@@ -21,4 +26,4 @@ ReactDOM.render(
     , document.getElementById('root'));
 
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+//serviceWorker.unregister();

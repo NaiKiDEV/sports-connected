@@ -58,5 +58,24 @@ namespace SportsConnected.Services
             return new ResponseResult<Offer> { Error = false, Message = "Return successfuly", ReturnResult = offer };
         }
 
+        public async Task<ResponseResult<Offer>> DeleteOffer(Guid offerId)
+        {
+            var offer = GetOffer(offerId).Result.ReturnResult;
+            bool flag = false;
+            string message = "";
+            try {
+                _context.Offers.Remove(offer);
+                message = "Offer deleted successfully";
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                flag = true;
+                message = ex.Message;
+                return new ResponseResult<Offer> { Error = flag, Message = message, ReturnResult = offer };
+            }
+            return new ResponseResult<Offer> { Error = flag, Message = message, ReturnResult = null };
+        }
+
     }
 }
