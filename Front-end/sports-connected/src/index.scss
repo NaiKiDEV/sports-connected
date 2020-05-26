@@ -106,8 +106,6 @@ p.text-logo:hover
 .profile-logo{
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  border: 0px solid white;
 }
 
 .feature-card{
@@ -231,6 +229,20 @@ p.text-logo:hover
 .btn-more:hover{
   color: #5BC0BE !important;
 }
+.btn-morecard
+{
+  width: 125px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: white !important;
+  text-decoration: none !important;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+}
+.btn-morecard:hover{
+  color: #5BC0BE !important;
+}
 .btn-orderdesign {
   width: 175px;
   border-radius: 20px;
@@ -281,7 +293,20 @@ tbody + thead{
   scrollbar-color: #1A1B1F #333642;
   scrollbar-width: thin;
 }
-
+.allgyms_height{
+  max-height: 600px;
+  overflow-y: auto;
+  scrollbar-color: #1A1B1F #333642;
+  scrollbar-width: thin;
+}
+.allgyms_height::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+.allgyms_height::-webkit-scrollbar-thumb {
+  background: #1A1B1F;
+  border-radius: 20px;
+}
 .offers_height::-webkit-scrollbar {
   width: 10px;
 }

@@ -51,7 +51,7 @@ function ProfileIcon() {
         <div>
             <Dropdown className="">
                 <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
-                    <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-3/177800/130-512.png" alt="logo" className="profile-logo" />
+                    <img src="https://flaticons.net/icon.php?slug_category=application&slug_icon=user-profile" alt="logo" className="profile-logo" />
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu as={CustomMenu} className="mb-0 pb-0" alignRight>
