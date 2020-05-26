@@ -84,7 +84,7 @@ function AddOfferModal(props) {
                     </Form.Group>
                     <Form.Group className="" controlId="formGroupId">
                         <Form.Label>Sales Id</Form.Label>
-                        <Form.Control disabled type="text" className="border-zero submit-text" placeholder={props.gymId} required onChange={e => setGymid(props.gymId)} />
+                        <Form.Control disabled type="text" className="border-zero submit-text" placeholder={props.gymId} />
                     </Form.Group>
                     <Row>
                         <Col sm="12">

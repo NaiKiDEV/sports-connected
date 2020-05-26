@@ -43,7 +43,6 @@ namespace SportsConnected.Controllers
             return result;
         }
 
-<<<<<<< HEAD
 
         [HttpGet("{id}")]
         public async Task<ActionResult<ResponseResult<User>>> GetAllUsers(Guid id)
@@ -72,6 +71,7 @@ namespace SportsConnected.Controllers
             var result = await _usersService.DeleteMemberShip(id);
             return result;
         }
+
         [HttpGet("membership/{id}")]
         public async Task<ActionResult<ResponseResult<Membership>>> GetMembership(Guid id)
         {
@@ -80,20 +80,18 @@ namespace SportsConnected.Controllers
         }
 
         [HttpGet("membership")]
-        public async Task<ActionResult<ResponseResult<Membership>>> GetMemberships()
+        public async Task<ActionResult<ResponseResult<ICollection<Membership>>>> GetMemberships()
         {
             var result = await _usersService.GetAllMemberShips();
             return result;
         }
 
-=======
         [HttpPut]
         public async Task<ActionResult<ResponseResult<User>>> UpdateUser([FromBody]User user)
         {
             var result = await _usersService.UpdateUser(user);
             return result;
         }
->>>>>>> 492f1c43443db62a6a4e0426e4945adfd0d19bbe
     }
 
 }
