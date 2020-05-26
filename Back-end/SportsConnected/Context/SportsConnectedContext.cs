@@ -15,6 +15,7 @@ namespace SportsConnected.Context
         public DbSet<Gym> Gyms { get; set; }
         public DbSet<Court> Courts { get; set; }
         public DbSet<Offer> Offers { get; set; }
+        public DbSet<Membership> Memberships { get; set; }
         // Add here other entities dbsets
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {

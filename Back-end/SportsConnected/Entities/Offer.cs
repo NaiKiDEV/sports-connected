@@ -19,6 +19,6 @@ namespace SportsConnected.Entities
         public Guid? GymId { get; set; }
         [ForeignKey("GymId")]
         public virtual Gym Gym { get; set; }
-
+        public virtual ICollection<Membership> Memberships { get; set; }
     }
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SportsConnected.DTO;
+using SportsConnected.Entities;
 using SportsConnected.Models;
 using SportsConnected.Services.ServiceInterfaces;
 
@@ -41,5 +42,49 @@ namespace SportsConnected.Controllers
             var result = await _usersService.GetAllUsers();
             return result;
         }
+
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ResponseResult<User>>> GetAllUsers(Guid id)
+        {
+            var result = await _usersService.GetUser(id);
+            return result;
+        }
+
+        [HttpPost("membership")]
+        public async Task<ActionResult<ResponseResult<Membership>>> AddMembership([FromBody]Membership membership)
+        {
+            var result = await _usersService.AddMemberShip(membership);
+            return result;
+        }
+
+        [HttpPut("membership")]
+        public async Task<ActionResult<ResponseResult<Membership>>> EditMembership([FromBody]Membership membership)
+        {
+            var result = await _usersService.EditMemberShip(membership);
+            return result;
+        }
+
+        [HttpDelete("membership/{id}")]
+        public async Task<ActionResult<ResponseResult<Membership>>> DeleteMembership(Guid id)
+        {
+            var result = await _usersService.DeleteMemberShip(id);
+            return result;
+        }
+        [HttpGet("membership/{id}")]
+        public async Task<ActionResult<ResponseResult<Membership>>> GetMembership(Guid id)
+        {
+            var result = await _usersService.GetMemberShip(id);
+            return result;
+        }
+
+        [HttpGet("membership")]
+        public async Task<ActionResult<ResponseResult<Membership>>> GetMemberships()
+        {
+            var result = await _usersService.GetAllMemberShips();
+            return result;
+        }
+
     }
+
 }

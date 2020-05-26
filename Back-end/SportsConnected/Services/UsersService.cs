@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SportsConnected.Context;
 using SportsConnected.DTO;
+using SportsConnected.Entities;
 using SportsConnected.Models;
 using SportsConnected.Services.ServiceInterfaces;
 using System;
@@ -42,6 +43,44 @@ namespace SportsConnected.Services
             var users =  _context.Users.ToList();
             return new ResponseResult<ICollection<User>> { Error = false, Message = "All users returned successfully", ReturnResult = users };
         }
+
+        public async Task<ResponseResult<User>> GetUser(Guid id)
+        {
+            var user = _context.Users.Include(a=>a.Memberships).FirstOrDefault(x => x.Id == id);
+            return new ResponseResult<User> { Error = false, Message = "user returned successfully", ReturnResult = user };
+        }
+
+        public async Task<ResponseResult<Membership>> AddMemberShip(Membership membership)
+        {
+            _context.Memberships.Add(membership);
+            await _context.SaveChangesAsync();
+            return new ResponseResult<Membership> { Error = false, Message = "All users returned successfully", ReturnResult = membership };
+        }
+        public async Task<ResponseResult<Membership>> EditMemberShip(Membership membership)
+        {
+            var user = _context.Memberships.Update(membership);
+            await _context.SaveChangesAsync();
+             return new ResponseResult<Membership> { Error = false, Message = "Updated", ReturnResult = membership };
+        }
+        public async Task<ResponseResult<Membership>> DeleteMemberShip(Guid membershipId)
+        {
+            var membership = _context.Memberships.Include(u => u.Offer).Include(u => u.User).FirstOrDefault(x => x.Id == membershipId);
+            _context.Memberships.Remove(membership);
+            await _context.SaveChangesAsync();
+            return new ResponseResult<Membership> { Error = false, Message = "All users returned successfully", ReturnResult = membership };
+        }
+        public async Task<ResponseResult<Membership>> GetMemberShip(Guid membershipId)
+        {
+            var membership = _context.Memberships.Include(u=>u.Offer).Include(u=>u.User).FirstOrDefault(x => x.Id == membershipId);
+            return new ResponseResult<Membership> { Error = false, Message = "All users returned successfully", ReturnResult = membership };
+        }
+
+        public async Task<ResponseResult<ICollection<Membership>>> GetAllMemberShips()
+        {
+            var membership = _context.Memberships.ToList();
+            return new ResponseResult<ICollection<Membership>> { Error = false, Message = "All users returned successfully", ReturnResult = membership };
+        }
+
 
         public async Task<ResponseResult<User>> ValidateUserLogin(LoginFormModel login) {
             string message;
