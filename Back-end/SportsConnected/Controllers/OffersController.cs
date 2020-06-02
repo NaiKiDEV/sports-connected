@@ -21,6 +21,13 @@ namespace SportsConnected.Controllers
             _offersService = offersService;
         }
 
+        [HttpPut]
+        public async Task<ActionResult<ResponseResult<Offer>>> UpdateOFfer([FromBody]Offer offer)
+        {
+            var result = await _offersService.UpdateOffer(offer);
+            return result;
+        }
+
 
         [HttpGet]
         public async Task<ActionResult<ResponseResult<ICollection<Offer>>>> GetAllOffers() {

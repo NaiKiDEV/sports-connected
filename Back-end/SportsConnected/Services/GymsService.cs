@@ -18,6 +18,20 @@ namespace SportsConnected.Services
             _context = context;
         }
 
+        public async Task<ResponseResult<Gym>> UpdateGym(Gym gym)
+        {
+            try
+            {
+                _context.Gyms.Update(gym);
+                await _context.SaveChangesAsync();
+                return new ResponseResult<Gym> { Error = false, Message = "court updated successfully", ReturnResult = gym };
+            }
+            catch (Exception ex)
+            {
+                return new ResponseResult<Gym> { Error = true, Message = ex.Message, ReturnResult = gym };
+            }
+        }
+
         public async Task<ResponseResult<Gym>> AddNewGym(Gym newGym)
         {
             bool flag = false;

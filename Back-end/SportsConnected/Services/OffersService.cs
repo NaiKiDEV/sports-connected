@@ -17,6 +17,20 @@ namespace SportsConnected.Services
             _context = context;
         }
 
+        public async Task<ResponseResult<Offer>> UpdateOffer(Offer offer)
+        {
+            try
+            {
+                _context.Offers.Update(offer);
+                await _context.SaveChangesAsync();
+                return new ResponseResult<Offer> { Error = false, Message = "court updated successfully", ReturnResult = offer };
+            }
+            catch (Exception ex)
+            {
+                return new ResponseResult<Offer> { Error = true, Message = ex.Message, ReturnResult = offer };
+            }
+        }
+
         public async Task<ResponseResult<Offer>> AddNewOffer(Offer newOffer)
         {
             bool flag = false;

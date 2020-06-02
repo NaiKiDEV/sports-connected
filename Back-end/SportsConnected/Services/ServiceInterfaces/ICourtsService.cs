@@ -14,5 +14,6 @@ namespace SportsConnected.Services.ServiceInterfaces
         Task<ResponseResult<ICollection<Court>>> GetAllCourts();
         Task<ResponseResult<ICollection<Court>>> GetCourtsByOwnerId(Guid userId);
         Task<ResponseResult<Court>> DeleteCourt(Guid courtId);
+        Task<ResponseResult<Court>> UpdateCourt(Court court);
     }
 }

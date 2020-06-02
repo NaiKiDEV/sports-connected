@@ -22,6 +22,13 @@ namespace SportsConnected.Controllers
             _courtsService = courtsService;
         }
 
+        [HttpPut]
+        public async Task<ActionResult<ResponseResult<Court>>> UpdateCourt([FromBody]Court court)
+        {
+            var result = await _courtsService.UpdateCourt(court);
+            return result;
+        }
+
 
         [HttpGet]
         public async Task<ActionResult<ResponseResult<ICollection<Court>>>> GetAllCourts()
