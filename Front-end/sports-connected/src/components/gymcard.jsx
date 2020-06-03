@@ -64,9 +64,19 @@ function GymCard() {
                         <SingleGym name="Sport Club" url="https://picsum.photos/400/400?random=8" status="Aktyvus" >
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint et rem facilis deleniti ipsum nulla.
                         </SingleGym>
-                        <div className="d-inline-flex justify-content-center align-item-center">
-                            <i class="fas fa-plus fa-4x btn-addgymusr" onClick={() => openModal()}></i>
-                        </div>
+                        <Card className="text-light modal-header menu-item single-gym">
+                            <Card.Body>
+                                <Card.Title className="text-center">
+                                <i class="fas fa-plus fa-4x btn-addgymusr" onClick={() => openModal()}></i>
+                                </Card.Title>
+                                <Container className="text-center">
+                                    <Row className="mt-4">
+                                        <Col >
+                                        </Col>
+                                    </Row>
+                                </Container>
+                            </Card.Body>
+                        </Card>
                     </div>
                 </Row>
             </Card.Body>

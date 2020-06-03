@@ -56,7 +56,11 @@ p.text-logo:hover
   transition: all 0.2s ease-in-out;
   text-align: center;
 }
-
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 .btn-login:hover{
   letter-spacing: 3px;
 }
