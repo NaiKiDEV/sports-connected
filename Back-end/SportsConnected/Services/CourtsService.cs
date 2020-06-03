@@ -34,6 +34,20 @@ namespace SportsConnected.Services
             return new ResponseResult<Court> { Error = flag, Message = message, ReturnResult = newCourt };
         }
 
+        public async Task<ResponseResult<Court>> UpdateCourt(Court court)
+        {
+            try
+            {
+                _context.Courts.Update(court);
+                await _context.SaveChangesAsync();
+                return new ResponseResult<Court> { Error = false, Message = "court updated successfully", ReturnResult = court };
+            }
+            catch (Exception ex)
+            {
+                return new ResponseResult<Court> { Error = true, Message = ex.Message, ReturnResult = court };
+            }
+        }
+
         public async Task<ResponseResult<ICollection<Court>>> GetAllCourts()
         {
             var courts = _context.Courts.Include(x => x.Offers).ToList();

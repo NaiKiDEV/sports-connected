@@ -14,5 +14,6 @@ namespace SportsConnected.Services.ServiceInterfaces
         Task<ResponseResult<ICollection<Gym>>> GetGymsByOwnerId(Guid userId);
         Task<ResponseResult<Gym>> GetGym(Guid gymId);
         Task<ResponseResult<Gym>> DeleteGym(Guid gymId);
+        Task<ResponseResult<Gym>> UpdateGym(Gym gym);
     }
 }

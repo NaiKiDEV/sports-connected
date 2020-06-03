@@ -21,6 +21,13 @@ namespace SportsConnected.Controllers
             _gymsService = gymsService;
         }
 
+        [HttpPut]
+        public async Task<ActionResult<ResponseResult<Gym>>> UpdateGym([FromBody]Gym gym)
+        {
+            var result = await _gymsService.UpdateGym(gym);
+            return result;
+        }
+
 
         [HttpGet]
         public async Task<ActionResult<ResponseResult<ICollection<Gym>>>> GetAllGyms()
