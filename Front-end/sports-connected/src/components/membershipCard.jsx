@@ -15,13 +15,13 @@ function DisplayAllMembership(props) {
         if (element.isPaid) {
             return <Row>
                 <Col>
-                    {element.offer.gym.title} | {element.startDate.split("T")[0]} - {element.endDate.split("T")[0]} | <span className="text-success text-uppercase">patvirtinta</span>
+                    {element.offer.gym.title} | {element.offer.title} | Galioja iki {element.endDate.split("T")[0]} | <span className="text-success text-uppercase">patvirtinta</span>
                 </Col>
             </Row>
         } else {
             return <Row>
                 <Col>
-                    {element.offer.gym.title} | {element.startDate.split("T")[0]} - {element.endDate.split("T")[0]} | <span className="text-danger text-uppercase">Nepatvirtinta</span>
+                    {element.offer.gym.title} | {element.offer.title} | Galioja iki {element.endDate.split("T")[0]} | <span className="text-danger text-uppercase">Nepatvirtinta</span>
                 </Col>
             </Row>
         }
@@ -110,7 +110,7 @@ function MembershipCard() {
     }, []);
 
     return (
-        <div class="h-100">
+        <div className="h-100">
             <Card className="text-light modal-header ml-3 h-100">
                 <Card.Body >
                     <Card.Title>
