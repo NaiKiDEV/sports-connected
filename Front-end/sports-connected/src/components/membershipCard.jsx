@@ -10,16 +10,18 @@ function DisplayAllMembership(props) {
 
     return props.membershipData.map(element => {
         //console.log(returnMembershipData(element.offerId, props.offerData, props.gymData));
+        // element.offer.title
+        console.log(element);
         if (element.isPaid) {
             return <Row>
                 <Col>
-                    {element.id.split("-")[0]} | {element.startDate.split("T")[0]} - {element.endDate.split("T")[0]} | <span className="text-success text-uppercase">patvirtinta</span>
+                    {element.offer.gym.title} | {element.startDate.split("T")[0]} - {element.endDate.split("T")[0]} | <span className="text-success text-uppercase">patvirtinta</span>
                 </Col>
             </Row>
         } else {
             return <Row>
                 <Col>
-                    {element.id.split("-")[0]} | {element.startDate.split("T")[0]} - {element.endDate.split("T")[0]} | <span className="text-danger text-uppercase">Nepatvirtinta</span>
+                    {element.offer.gym.title} | {element.startDate.split("T")[0]} - {element.endDate.split("T")[0]} | <span className="text-danger text-uppercase">Nepatvirtinta</span>
                 </Col>
             </Row>
         }

@@ -60,7 +60,7 @@ namespace SportsConnected.Services
 
         public async Task<ResponseResult<User>> GetUser(Guid id)
         {
-            var user = _context.Users.Include(a=>a.Memberships).FirstOrDefault(x => x.Id == id);
+            var user = _context.Users.Include(a=>a.Memberships).ThenInclude(x => x.Offer).ThenInclude(x => x.Gym).FirstOrDefault(x => x.Id == id);
             return new ResponseResult<User> { Error = false, Message = "user returned successfully", ReturnResult = user };
         }
 
