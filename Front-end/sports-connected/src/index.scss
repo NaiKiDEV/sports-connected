@@ -341,10 +341,31 @@ tbody + thead{
 div.scrollmenu {
   overflow: auto;
   white-space: nowrap;
+}
+div.scrollmenu-court {
+  width: 44vw;
+}
+div.scrollmenu-trainer {
+  width: 52.5vw;
+}
+div.scrollmenu-gym {
   width: 45vw;
 }
-
 div.scrollmenu .single-gym {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+div.scrollmenu .single-trainer {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+div.scrollmenu .single-court {
   display: inline-block;
   color: white;
   text-align: center;
