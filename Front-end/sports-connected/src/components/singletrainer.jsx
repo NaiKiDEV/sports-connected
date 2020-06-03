@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
 function SingleTrainer(props) {
-    return <Card className="text-light modal-header menu-item">
+    return <Card className="text-light modal-header menu-item single-trainer">
         <Card.Body>
             <Card.Title className="text-center">
                 <img src={props.url} alt="" className="trainer-logo" />

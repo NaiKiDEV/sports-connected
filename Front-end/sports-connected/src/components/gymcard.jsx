@@ -45,7 +45,7 @@ function GymCard() {
                     <h2>SPORTO SALES</h2>
                 </Card.Title>
                 <Row>
-                    <div className="scrollmenu">
+                    <div className="scrollmenu scrollmenu-gym">
                         <SingleGym name="Gym+" url="https://picsum.photos/400/400?random=6" status="Laukiama pavedimo" >
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint et rem facilis deleniti ipsum nulla.
                         </SingleGym>
