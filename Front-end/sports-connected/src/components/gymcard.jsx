@@ -168,9 +168,10 @@ function DisplayAllGymData(props) {
 
 function DisplayGyms(props) {
     return <div>
-        <Accordion >
-            <Accordion.Toggle as={Card.Header} eventKey="0">
-                <h4 className="text-white">Salės</h4>
+        <Accordion>
+            <Accordion.Toggle as={Card.Header} className="navbar-color border-none" eventKey="0">
+                <h4 className="text-white d-inline">Salės</h4>
+                <i class="fas fa-angle-down d-inline float-right fa-2x"></i>
             </Accordion.Toggle>
             <DisplayAllGymData gymArray={props.gymArray} setKey={props.setKey}></DisplayAllGymData>
         </Accordion>
@@ -241,7 +242,7 @@ function TakeOfferModal(props) {
                 <Modal.Title className="text-bold text-uppercase">Nusipirkti naryste</Modal.Title>
                 <i className="close-button fas fa-times" alt="foto" onClick={props.onModalClick} />
             </Modal.Header>
-            <Modal.Body className="modal-content">
+            <Modal.Body className="modal-content pt-0 navbar-color">
                 <Form>
                     <Row className="">
                         <Col sm="12" className="px-0">
@@ -249,8 +250,9 @@ function TakeOfferModal(props) {
                         </Col>
                         <Col sm="12" className="px-0">
                             <Accordion >
-                                <Accordion.Toggle as={Card.Header} eventKey="0">
-                                    <h4 className="text-white">Pasiūlymai</h4>
+                                <Accordion.Toggle as={Card.Header} className="navbar-color border-none" eventKey="0">
+                                    <h4 className="text-white d-inline">Pasiūlymai</h4>
+                                    <i class="fas fa-angle-down d-inline float-right fa-2x"></i>
                                 </Accordion.Toggle>
                                 <DisplayOffers offersArray={props.gymOffers} filterKey={selectedKey} setOffer={setOffer}></DisplayOffers>
                             </Accordion>

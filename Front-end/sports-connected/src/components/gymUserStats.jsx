@@ -6,7 +6,7 @@ function GymUserStats() {
     return (
         <Card className="text-light modal-header ml-3">
             <Card.Body className="w-100">
-                <Card.Title>
+            <Card.Title className="login-header">
                     <h2>VARTOTOJŲ STATISTIKA</h2>
                 </Card.Title>
                 <Container fluid className="pt-2">
