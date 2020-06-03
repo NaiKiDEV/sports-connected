@@ -2,6 +2,8 @@ import React, { useState, useHistory, useEffect } from 'react';
 import { Container, Row, Col, Card, Modal, Form, Button, Accordion } from 'react-bootstrap';
 import SingleGym from './singlegym';
 import SingleGymOffer from './singlegymoffer';
+import { useSelector } from 'react-redux';
+//import { useAccordionToggle } from 'react-bootstrap/AccordionToggle';
 
 function GymCard() {
 
@@ -27,7 +29,7 @@ function GymCard() {
             .then(a => {
                 if (a.error === false) {
                     const { returnResult } = a;
-                    console.log(returnResult);
+                    //console.log(returnResult);
                     setOffers(returnResult);
                     //return returnResult.forEach(element => <SingleGym name={element.title} url={element.ImageUrl} status="Laukiama pavedimo" ></SingleGym>
                 } else {
@@ -49,7 +51,7 @@ function GymCard() {
             .then(a => {
                 if (a.error === false) {
                     const { returnResult } = a;
-                    console.log(returnResult);
+                    //console.log(returnResult);
                     setGyms(returnResult);
                     //return returnResult.forEach(element => <SingleGym name={element.title} url={element.ImageUrl} status="Laukiama pavedimo" ></SingleGym>
                 } else {
@@ -116,7 +118,7 @@ function DisplayOffers(props) {
     //console.log(filteredArray);
     return filteredArray.map(element =>
         <Card
-            //onClick={() => props.setKey(element.id)}
+            onClick={() => props.setOffer(element.id)}
             className="border-zero"
         >
             <Accordion.Collapse eventKey="0">
@@ -138,7 +140,7 @@ function DisplayOffers(props) {
 
 function DisplayAllGymData(props) {
     var randkey = 0;
-    console.log(props.gymArray);
+    //console.log(props.gymArray);
     return props.gymArray.map(element => {
         var randkeyVal = randkey.toString();
         randkey++;
@@ -179,6 +181,53 @@ function DisplayGyms(props) {
 function TakeOfferModal(props) {
     const [selectedKey, setKey] = useState([]);
     const [selectedOffer, setOffer] = useState([]);
+    const userData = useSelector(state => state.user.userData);
+
+    function makeOfferRequest() {
+
+        var currentdate = new Date();
+        var datetime = currentdate.getFullYear() + "-"
+            + (currentdate.getMonth() + 1) + "-"
+            + currentdate.getDate() + " "
+            + currentdate.getHours() + ":"
+            + currentdate.getMinutes();
+        var enddatetime = currentdate.getFullYear() + "-"
+            + (currentdate.getMonth() + 2) + "-"
+            + currentdate.getDate() + " "
+            + currentdate.getHours() + ":"
+            + currentdate.getMinutes();
+
+        const offerDetails =
+        {
+            offerId: selectedOffer,
+            userId: userData.id,
+            startDate: datetime,
+            endDate: enddatetime,
+            isPaid: false
+        }
+        fetch("https://sportsconnectedback.azurewebsites.net/api/users/membership",
+            {
+                method: 'POST',
+                cache: 'no-cache',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(offerDetails)
+            }
+        )
+            .then(res => res.json())
+            .then(a => {
+                if (a.error === false) {
+                    const { returnResult } = a;
+                    //console.log(a);
+                    props.onModalClick();
+                    window.location.reload();
+                } else {
+                    alert(a.message);
+                }
+            });
+    }
+
     return (
         <Modal
             aria-labelledby="contained-modal-title-vcenter"
@@ -203,13 +252,13 @@ function TakeOfferModal(props) {
                                 <Accordion.Toggle as={Card.Header} eventKey="0">
                                     <h4 className="text-white">Pasiūlymai</h4>
                                 </Accordion.Toggle>
-                                <DisplayOffers offersArray={props.gymOffers} filterKey={selectedKey}></DisplayOffers>
+                                <DisplayOffers offersArray={props.gymOffers} filterKey={selectedKey} setOffer={setOffer}></DisplayOffers>
                             </Accordion>
                         </Col>
                     </Row>
                     <Row>
                         <Col sm="12">
-                            <Button className="float-right btn-add text-uppercase" variant="link" type="button">Užsisakyti</Button>
+                            <Button className="float-right btn-add text-uppercase" variant="link" type="button" onClick={() => makeOfferRequest()}>Užsisakyti</Button>
                         </Col>
                     </Row>
                 </Form>

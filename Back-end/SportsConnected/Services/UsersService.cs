@@ -91,7 +91,7 @@ namespace SportsConnected.Services
 
         public async Task<ResponseResult<ICollection<Membership>>> GetAllMemberShips()
         {
-            var membership = _context.Memberships.ToList();
+            var membership = _context.Memberships.Include(x=>x.Offer).ThenInclude(x=>x.Gym).Include(x=>x.Offer).ThenInclude(x=>x.Court).ToList();
             return new ResponseResult<ICollection<Membership>> { Error = false, Message = "All users returned successfully", ReturnResult = membership };
         }
 
