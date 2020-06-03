@@ -20,7 +20,7 @@ function AllGyms() {
     return (
         <Container fluid className="px-0 pt-4">
             <div className="text-center">
-            <Button href="#" variant="link" className="mx-1 btn-orderdesign btn-order" onClick={()=>showMore()} id="moreButton">DAUGIAU</Button>
+            <Button href="#" variant="link" className="my-3 mx-1 btn-orderdesign btn-order" onClick={()=>showMore()} id="moreButton">DAUGIAU</Button>
             </div>
              <div className="d-none allgyms_height" id="moreSection">
                 <Row className="pl-4 mb-0 w-100 mx-0 py-2 ">
@@ -216,13 +216,13 @@ function AllGyms() {
                         Nuo 24,99 €
                     </Col>
                     <Col className="d-flex align-items-center text-bold justify-content-center" sm="3">            
-                        <Button href="#" variant="link" className="mx-1 btn-more">DAUGIAU</Button>
+                        <Button href="#" variant="link" className=" mx-1 btn-more">DAUGIAU</Button>
                         <Button href="#" variant="link" className="mx-1 btn-orderdesign btn-order">UŽSISAKYTI</Button>
                     </Col>
                 </Row>
             </div>
             <div className="text-center">
-                <Button href="#" variant="link" className="mx-1 btn-orderdesign btn-order d-none" onClick={()=>showMore()} id="lessButton">MAŽIAU</Button>
+                <Button href="#" variant="link" className="my-3 mx-1 btn-orderdesign btn-order d-none" onClick={()=>showMore()} id="lessButton">MAŽIAU</Button>
             </div>
         </Container>
     )
