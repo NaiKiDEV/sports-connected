@@ -122,7 +122,7 @@ function DisplayOffers(props) {
             className="border-zero"
         >
             <Accordion.Collapse eventKey="0">
-                <Card.Body className="px-0 py-0">
+                <Card.Body className="px-0 py-0 accordion-item">
                     <Row className="pl-4 mb-0 w-100 offers_select mx-0 py-2">
                         <Col sm={8}>
                             <h6 className="text-white">{element.title}</h6>
@@ -144,7 +144,7 @@ function DisplayAllGymData(props) {
     return props.gymArray.map(element => {
         var randkeyVal = randkey.toString();
         randkey++;
-        return <Card onClick={() => props.setKey(element.id)} className="border-zero">
+        return <Card onClick={() => props.setKey(element.id)} className="border-zero accordion-item">
             <Accordion.Collapse eventKey="0">
                 <Card.Body className="px-0 py-0">
                     <Row className="px-4 mb-0 w-100 offers_select mx-0 py-2">
@@ -260,7 +260,7 @@ function TakeOfferModal(props) {
                     </Row>
                     <Row>
                         <Col sm="12">
-                            <Button className="float-right btn-add text-uppercase" variant="link" type="button" onClick={() => makeOfferRequest()}>Užsisakyti</Button>
+                            <Button className="float-right btn-add text-uppercase mt-2" variant="link" type="button" onClick={() => makeOfferRequest()}>Užsisakyti</Button>
                         </Col>
                     </Row>
                 </Form>

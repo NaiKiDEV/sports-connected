@@ -260,6 +260,23 @@ footer {
 .btn-morecard:hover{
   color: #5BC0BE !important;
 }
+.accordion-item 
+{
+  background-color: #1C2541;
+}
+.accordion-item :hover
+{
+  background-color: #5BC0BE !important;
+  cursor: pointer;
+}
+.accordion-item :active
+{
+  background-color: #5BC0BE !important;
+}
+.on .accordion-item
+{
+  background-color: #5BC0BE !important;
+}
 .btn-orderdesign {
   width: 175px;
   border-radius: 20px;
