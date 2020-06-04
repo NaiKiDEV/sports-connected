@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import SingleGym from './singlegym';
-import MembershipCard from './membershipCard';
+import MembershipCard from './gymAdminMembershipCard';
 import GymOffers from './gymoffers';
 import GymUserStats from './gymUserStats';
 import CourtCard from './courtcard';

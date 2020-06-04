@@ -15,9 +15,15 @@ import { useSelector } from 'react-redux';
 
 function AllowDashboardAccess() {
   const { isLoggedIn } = useSelector(state => state.user);
+  const { isSportGymAdmin } = useSelector(state => state.user.userData);
+
 
   if (isLoggedIn) {
-    return <Dashboard />
+    if (isSportGymAdmin) {
+      return <GymPage />
+    } else {
+      return <Dashboard />
+    }
   }
 
   return <UnauthorizedAccess />
@@ -67,7 +73,7 @@ function App() {
           <Trainers />
         </Route>
         <Route exact path="/courts">
-          <Courts/>
+          <Courts />
         </Route>
       </Switch>
       <Footer />
