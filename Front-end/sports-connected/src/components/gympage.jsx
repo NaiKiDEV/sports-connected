@@ -17,6 +17,8 @@ function DisplayGyms(props) {
 function GymCard() {
 
   const [gyms, setGyms] = useState([]);
+  const [memberships, setMemberships] = useState([]);
+  const [filteredMemb, setFilteredMemb] = useState([]);
 
   function GetAllGyms() {
     fetch("https://sportsconnectedback.azurewebsites.net/api/gyms",
@@ -40,10 +42,40 @@ function GymCard() {
       });
   }
 
+  function GetAllMemberships(gymId) {
+    fetch("https://sportsconnectedback.azurewebsites.net/api/users/membership",
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    )
+      .then(res => res.json())
+      .then(a => {
+        if (a.error === false) {
+          const { returnResult } = a;
+          console.log(returnResult);
+          setMemberships(returnResult);
+
+          //return returnResult.forEach(element => <SingleGym name={element.title} url={element.ImageUrl} status="Laukiama pavedimo" ></SingleGym>
+        } else {
+          alert(a.message);
+        }
+      }).then(() => formTable()
+      );
+  }
+
   useEffect(() => {
     GetAllGyms();
+    GetAllMemberships();
   }, []);
-  const data = {
+
+  useEffect(() => {
+    formTable();
+  }, [memberships]);
+
+  const [tableData, setTableData] = useState({
     columns: [
       {
         label: 'Vardas',
@@ -94,135 +126,37 @@ function GymCard() {
         width: 100
       }
     ],
-    rows: [
-      {
-        name: 'Jonas',
-        surname: 'Granauskas',
-        phone: '+370 6124230',
-        email: 'granauskas@gmail.com',
-        startdate: '2019-04-20',
-        enddate: '2021-04-20',
-        type: 'Visos dienos',
-        paid: 'Taip'
-      },
-      {
-        name: 'Petras',
-        surname: 'Popovicius',
-        phone: '+370 60273210',
-        email: 'popovicpetras@gmail.com',
-        startdate: '2001-01-09',
-        enddate: '2002-01-03',
-        type: 'Puse dienos',
-        paid: 'Ne'
-      },
-      {
-        name: 'Julijus',
-        surname: 'Kazlauskas',
-        phone: '+370 66155642',
-        email: 'julijus19@gmail.com',
-        startdate: '2016-01-09',
-        enddate: '2020-01-03',
-        type: 'Visos dienos',
-        paid: 'Taip'
+    rows: []
+  });
+
+  function formTable() {
+    //debugger
+    const tempArray = tableData.rows;
+    memberships.forEach(element => {
+      //debugger
+      if (element.offer.gymId === "ec136088-eeba-4c1c-96ce-c6b379d4151d") {
+        setFilteredMemb({ ...filteredMemb, element });
+        //debugger
+        tempArray.push({
+          name: element.user.name,
+          surname: element.user.surname,
+          phone: element.user.phoneNumber,
+          email: element.user.email,
+          startdate: element.startDate,
+          enddate: element.startDate,
+          type: element.offer.title,
+          paid: element.isPaid.toString()
+        });
+
       }
-      ,
-      {
-        name: 'Iveta',
-        surname: 'Malakauskiene',
-        phone: '+370 66155642',
-        email: 'iveta.mal@gmail.com',
-        startdate: '2016-01-09',
-        enddate: '2020-01-03',
-        type: 'Visos dienos',
-        paid: 'Ne'
-      }
-      ,
-      {
-        name: 'Irena',
-        surname: 'Mazoraite',
-        phone: '+370 66155642',
-        email: 'mazoraite.iveta@gmail.com',
-        startdate: '2016-01-09',
-        enddate: '2020-01-03',
-        type: 'Puse dienos',
-        paid: 'Ne'
-      }
-      ,
-      {
-        name: 'Nerijus',
-        surname: 'Urbonas',
-        phone: '+370 66155642',
-        email: 'nerijusart@gmail.com',
-        startdate: '2016-01-09',
-        enddate: '2020-01-03',
-        type: 'Visos dienos',
-        paid: 'Taip'
-      },
-      {
-        name: 'Jonas',
-        surname: 'Granauskas',
-        phone: '+370 6124230',
-        email: 'granauskas@gmail.com',
-        startdate: '2019-04-20',
-        enddate: '2021-04-20',
-        type: 'Visos dienos',
-        paid: 'Taip'
-      },
-      {
-        name: 'Petras',
-        surname: 'Popovicius',
-        phone: '+370 60273210',
-        email: 'popovicpetras@gmail.com',
-        startdate: '2001-01-09',
-        enddate: '2002-01-03',
-        type: 'Puse dienos',
-        paid: 'Ne'
-      },
-      {
-        name: 'Julijus',
-        surname: 'Kazlauskas',
-        phone: '+370 66155642',
-        email: 'julijus19@gmail.com',
-        startdate: '2016-01-09',
-        enddate: '2020-01-03',
-        type: 'Visos dienos',
-        paid: 'Taip'
-      }
-      ,
-      {
-        name: 'Iveta',
-        surname: 'Malakauskiene',
-        phone: '+370 66155642',
-        email: 'iveta.mal@gmail.com',
-        startdate: '2016-01-09',
-        enddate: '2020-01-03',
-        type: 'Visos dienos',
-        paid: 'Ne'
-      }
-      ,
-      {
-        name: 'Irena',
-        surname: 'Mazoraite',
-        phone: '+370 66155642',
-        email: 'mazoraite.iveta@gmail.com',
-        startdate: '2016-01-09',
-        enddate: '2020-01-03',
-        type: 'Puse dienos',
-        paid: 'Ne'
-      }
-      ,
-      {
-        name: 'Nerijus',
-        surname: 'Urbonas',
-        phone: '+370 66155642',
-        email: 'nerijusart@gmail.com',
-        startdate: '2016-01-09',
-        enddate: '2020-01-03',
-        type: 'Visos dienos',
-        paid: 'Taip'
-      }
-    ]
-  };
+    });
+    //console.log(data.rows, "cia rowai");
+    setTableData({
+      ...tableData, rows: tempArray
+    });
+  }
+
+
   return <Container fluid className="mt-5 mb-5">
     <Card className="text-light modal-header">
       <Card.Body className="pb-0">
@@ -252,7 +186,7 @@ function GymCard() {
       searchLabel='Paieška'
       paginationLabel={['Praeitas', 'Sekantis']}
       noRecordsFoundLabel="Nerasta elementų"
-      data={data}
+      data={tableData}
     />
   </Container >
 }
