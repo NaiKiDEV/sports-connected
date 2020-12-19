@@ -62,3 +62,5 @@ C:\Users\K\Desktop\sports-connected\sp2\sports-connected\Back-end\SportsConnecte
 C:\Users\K\Desktop\sports-connected\sp2\sports-connected\Back-end\SportsConnected\obj\Release\netcoreapp2.1\SportsConnected.RazorTargetAssemblyInfo.cache
 C:\Users\K\Desktop\sports-connected\sp2\sports-connected\Back-end\SportsConnected\obj\Release\netcoreapp2.1\SportsConnected.dll
 C:\Users\K\Desktop\sports-connected\sp2\sports-connected\Back-end\SportsConnected\obj\Release\netcoreapp2.1\SportsConnected.pdb
+C:\Users\domin\Documents\GitHub\sports-connected\Back-end\SportsConnected\obj\Release\netcoreapp2.1\SportsConnected.dll
+C:\Users\domin\Documents\GitHub\sports-connected\Back-end\SportsConnected\obj\Release\netcoreapp2.1\SportsConnected.pdb
